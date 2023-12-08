@@ -10,10 +10,22 @@ using System.Windows.Forms;
 using MyUI;
 using Basic;
 using MyOffice;
+using SQLUI;
 namespace APP_超晉線圈特性檢測機
 {
     public partial class Form1 : Form
     {
+        enum enum_test_result
+        {
+            GUID,
+            規格,
+            加入時間,
+        }
+        enum enum_test_result_匯出
+        {
+            規格,
+            加入時間,
+        }
         public class ExcelResultClass
         {
             public class HeaderClass
@@ -99,7 +111,105 @@ namespace APP_超晉線圈特性檢測機
         public string SheetFileName = @".\excel_header.txt";
         private void Program_表單下載_Init()
         {
+            Table table = new Table("");
+            table.DBName = "coil_mechine";
+            table.TableName = "test_result";
+            table.Server = "127.0.0.1";
+            table.Username = "user";
+            table.Password = "66437068";
+            table.Port = "3306";
+            table.AddColumnList("GUID", Table.StringType.VARCHAR, 50, Table.IndexType.PRIMARY);
+            table.AddColumnList("規格", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("加入時間", Table.DateType.DATETIME, Table.IndexType.INDEX);
+            this.sqL_DataGridView_線圈測試結果.DataBaseName = table.DBName;
+            this.sqL_DataGridView_線圈測試結果.TableName = table.TableName;
+            this.sqL_DataGridView_線圈測試結果.Server = table.Server;
+            this.sqL_DataGridView_線圈測試結果.UserName = table.Username;
+            this.sqL_DataGridView_線圈測試結果.Password = table.Password;
+            this.sqL_DataGridView_線圈測試結果.Port = table.Port.StringToUInt32();
+            this.sqL_DataGridView_線圈測試結果.SSLMode = MySql.Data.MySqlClient.MySqlSslMode.None;
+            this.sqL_DataGridView_線圈測試結果.Init(table);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnVisible(false, new enum_test_result().GetEnumNames());
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(150, DataGridViewContentAlignment.MiddleLeft, enum_test_result.規格);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(200, DataGridViewContentAlignment.MiddleCenter, enum_test_result.加入時間);
+            if (this.sqL_DataGridView_線圈測試結果.SQL_IsTableCreat() == false)
+            {
+                this.sqL_DataGridView_線圈測試結果.SQL_CreateTable();
+            }
+            else
+            {
+                this.sqL_DataGridView_線圈測試結果.SQL_CheckAllColumnName(true);
+            }
             this.plC_Button_表單下載.btnClick += PlC_Button_表單下載_btnClick;
+
+            this.plC_RJ_Button_新增資料.MouseDownEvent += PlC_RJ_Button_新增資料_MouseDownEvent;
+            this.plC_RJ_Button_更新資料.MouseDownEvent += PlC_RJ_Button_更新資料_MouseDownEvent;
+            this.plC_RJ_Button_刪除資料.MouseDownEvent += PlC_RJ_Button_刪除資料_MouseDownEvent;
+            this.plC_RJ_Button_顯示全部.MouseDownEvent += PlC_RJ_Button_顯示全部_MouseDownEvent;
+            this.plC_RJ_Button_匯出.MouseDownEvent += PlC_RJ_Button_匯出_MouseDownEvent;
+
+        }
+
+        private void PlC_RJ_Button_匯出_MouseDownEvent(MouseEventArgs mevent)
+        {
+            this.Invoke(new Action(delegate 
+            {
+                if (this.saveFileDialog_SaveExcel.ShowDialog() == DialogResult.OK)
+                {
+                    List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.GetAllRows();
+                    DataTable dataTable = list_value.ToDataTable(new enum_test_result());
+                    dataTable = dataTable.ReorderTable(enum_test_result.規格.GetEnumName(), enum_test_result.加入時間.GetEnumName());
+                    dataTable.SaveFile(this.saveFileDialog_SaveExcel.FileName);
+                    MyMessageBox.ShowDialog("匯出完成!!");
+                }
+            }));
+        }
+
+        private void PlC_RJ_Button_顯示全部_MouseDownEvent(MouseEventArgs mevent)
+        {
+            DateTime dt_st = rJ_DatePicker_起始時間.Value;
+            dt_st = new DateTime(dt_st.Year, dt_st.Month, dt_st.Day, 00, 00, 00);
+            DateTime dt_end = rJ_DatePicker_結束時間.Value;
+            dt_end = new DateTime(dt_end.Year, dt_end.Month, dt_end.Day, 23, 59, 59);
+
+            List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.SQL_GetRowsByBetween((int)enum_test_result.加入時間, dt_st, dt_end, true);
+        }
+        private void PlC_RJ_Button_刪除資料_MouseDownEvent(MouseEventArgs mevent)
+        {
+            List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.Get_All_Select_RowsValues();
+
+            if (list_value.Count == 0)
+            {
+                MyMessageBox.ShowDialog("未選取資料!!");
+                return;
+            }
+ 
+            this.sqL_DataGridView_線圈測試結果.SQL_DeleteExtra(list_value, false);
+            this.sqL_DataGridView_線圈測試結果.DeleteExtra(list_value, true);
+        }
+        private void PlC_RJ_Button_更新資料_MouseDownEvent(MouseEventArgs mevent)
+        {
+            List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.Get_All_Select_RowsValues();
+
+            if (list_value.Count == 0)
+            {
+                MyMessageBox.ShowDialog("未選取資料!!");
+                return;
+            }
+            object[] value = list_value[0];
+            value[(int)enum_test_result.規格] = textBox_規格.Text;
+            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString_6();
+            this.sqL_DataGridView_線圈測試結果.SQL_ReplaceExtra(value, false);
+            this.sqL_DataGridView_線圈測試結果.ReplaceExtra(value, true);
+        }
+        private void PlC_RJ_Button_新增資料_MouseDownEvent(MouseEventArgs mevent)
+        {
+            object[] value = new object[new enum_test_result().GetLength()];
+            value[(int)enum_test_result.GUID] = Guid.NewGuid().ToString();
+            value[(int)enum_test_result.規格] = textBox_規格.Text;
+            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString_6();
+            this.sqL_DataGridView_線圈測試結果.SQL_AddRow(value, false);
+            this.sqL_DataGridView_線圈測試結果.AddRow(value, true);
         }
 
         List<ExcelResultClass.Row> Row = new List<ExcelResultClass.Row>();
