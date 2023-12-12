@@ -20,6 +20,7 @@ namespace APP_超晉線圈特性檢測機
         }
 
         MyThread MyThread_儀器通訊;
+        MyThread MyThread__輸出報表資料暫存運算;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -43,6 +44,13 @@ namespace APP_超晉線圈特性檢測機
                 this.MyThread_儀器通訊.AutoRun(true);
                 this.MyThread_儀器通訊.AutoStop(true);
                 this.MyThread_儀器通訊.Trigger();
+
+                this.MyThread__輸出報表資料暫存運算 = new MyThread();
+                this.MyThread__輸出報表資料暫存運算.Add_Method(sub_輸出報表資料暫存運算);
+                this.MyThread__輸出報表資料暫存運算.SetSleepTime(1);
+                this.MyThread__輸出報表資料暫存運算.AutoRun(true);
+                this.MyThread__輸出報表資料暫存運算.AutoStop(true);
+                this.MyThread__輸出報表資料暫存運算.Trigger();
 
                 this.GOM_804_Init("COM4", 115200);
                 this.IWT_5000A_Init("COM6", 57600);

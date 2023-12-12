@@ -247,11 +247,19 @@ namespace APP_超晉線圈特性檢測機
         {
             object[] value = new object[new enum_test_result().GetLength()];
             value[(int)enum_test_result.GUID] = Guid.NewGuid().ToString();
+            //value[(int)enum_test_result.面積比] = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
+            //value[(int)enum_test_result.電暈數量] = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
+            //value[(int)enum_test_result.電阻值] = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
+            //value[(int)enum_test_result.漏電流] = textBox_ACW量測值.Text;
+            //value[(int)enum_test_result.絕緣抵抗] = textBox_IR絕緣量測值.Text;
+            //value[(int)enum_test_result.Vrms] = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
+            //value[(int)enum_test_result.Irms] = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
+            //value[(int)enum_test_result.電功率] = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.面積比] = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
             value[(int)enum_test_result.電暈數量] = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
             value[(int)enum_test_result.電阻值] = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
-            value[(int)enum_test_result.漏電流] = textBox_ACW量測值.Text;
-            value[(int)enum_test_result.絕緣抵抗] = textBox_IR絕緣量測值.Text;
+            value[(int)enum_test_result.漏電流] = 輸出textBox_ACW量測值;
+            value[(int)enum_test_result.絕緣抵抗] = 輸出textBox_ACW量測值;
             value[(int)enum_test_result.Vrms] = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.Irms] = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.電功率] = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
@@ -482,6 +490,214 @@ namespace APP_超晉線圈特性檢測機
                 if (row.判定 == "FAIL") sheetClass.AddNewCell_Webapi(7 + i, 9, $"{row.判定}", "微軟正黑體", 12, false, NPOI_Color.RED, 430, NPOI.SS.UserModel.HorizontalAlignment.Left, NPOI.SS.UserModel.VerticalAlignment.Bottom, NPOI.SS.UserModel.BorderStyle.Thin);
             }
 
+        }
+
+        PLC_Device PLC_Device_第二站測試次數 = new PLC_Device("D10000");
+        PLC_Device PLC_Device_電功率站測試次數 = new PLC_Device("D10001");
+        PLC_Device PLC_Device_耐壓站測試次數 = new PLC_Device("D10002");
+        PLC_Device PLC_Device_匝間站測試次數 = new PLC_Device("D10003");
+        PLC_Device PLC_Device_輸出數值站測試次數 = new PLC_Device("D10004");
+
+        PLC_Device PLC_Device_第1次Vrms暫存 = new PLC_Device("D10010");
+        PLC_Device PLC_Device_第1次Irms暫存 = new PLC_Device("D10012");
+        PLC_Device PLC_Device_第1次電功率暫存 = new PLC_Device("D10014");
+        PLC_Device PLC_Device_第1次漏電流暫存 = new PLC_Device("D10016");
+        PLC_Device PLC_Device_第1次絕緣抵抗暫存 = new PLC_Device("D10018");
+        PLC_Device PLC_Device_第1次電阻值暫存 = new PLC_Device("D10020");
+        PLC_Device PLC_Device_第1次電暈數量暫存 = new PLC_Device("D10022");
+        PLC_Device PLC_Device_第1次面積比暫存 = new PLC_Device("D10024");
+
+        PLC_Device PLC_Device_第2次Vrms暫存 = new PLC_Device("D10030");
+        PLC_Device PLC_Device_第2次Irms暫存 = new PLC_Device("D10032");
+        PLC_Device PLC_Device_第2次電功率暫存 = new PLC_Device("D10034");
+        PLC_Device PLC_Device_第2次漏電流暫存 = new PLC_Device("D10036");
+        PLC_Device PLC_Device_第2次絕緣抵抗暫存 = new PLC_Device("D10038");
+        PLC_Device PLC_Device_第2次電阻值暫存 = new PLC_Device("D10040");
+        PLC_Device PLC_Device_第2次電暈數量暫存 = new PLC_Device("D10042");
+        PLC_Device PLC_Device_第2次面積比暫存 = new PLC_Device("D10044");
+
+        PLC_Device PLC_Device_第3次Vrms暫存 = new PLC_Device("D10050");
+        PLC_Device PLC_Device_第3次Irms暫存 = new PLC_Device("D10052");
+        PLC_Device PLC_Device_第3次電功率暫存 = new PLC_Device("D10054");
+        PLC_Device PLC_Device_第3次漏電流暫存 = new PLC_Device("D10056");
+        PLC_Device PLC_Device_第3次絕緣抵抗暫存 = new PLC_Device("D10058");
+        PLC_Device PLC_Device_第3次電阻值暫存 = new PLC_Device("D10060");
+        PLC_Device PLC_Device_第3次電暈數量暫存 = new PLC_Device("D10062");
+        PLC_Device PLC_Device_第3次面積比暫存 = new PLC_Device("D10064");
+
+        PLC_Device PLC_Device_第4次Vrms暫存 = new PLC_Device("D10070");
+        PLC_Device PLC_Device_第4次Irms暫存 = new PLC_Device("D10072");
+        PLC_Device PLC_Device_第4次電功率暫存 = new PLC_Device("D10074");
+        PLC_Device PLC_Device_第4次漏電流暫存 = new PLC_Device("D10076");
+        PLC_Device PLC_Device_第4次絕緣抵抗暫存 = new PLC_Device("D10078");
+        PLC_Device PLC_Device_第4次電阻值暫存 = new PLC_Device("D10080");
+        PLC_Device PLC_Device_第4次電暈數量暫存 = new PLC_Device("D10082");
+        PLC_Device PLC_Device_第4次面積比暫存 = new PLC_Device("D10084");
+
+        PLC_Device PLC_Device_第5次Vrms暫存 = new PLC_Device("D10090");
+        PLC_Device PLC_Device_第5次Irms暫存 = new PLC_Device("D10092");
+        PLC_Device PLC_Device_第5次電功率暫存 = new PLC_Device("D10094");
+        PLC_Device PLC_Device_第5次漏電流暫存 = new PLC_Device("D10096");
+        PLC_Device PLC_Device_第5次絕緣抵抗暫存 = new PLC_Device("D10098");
+        PLC_Device PLC_Device_第5次電阻值暫存 = new PLC_Device("D10100");
+        PLC_Device PLC_Device_第5次電暈數量暫存 = new PLC_Device("D10102");
+        PLC_Device PLC_Device_第5次面積比暫存 = new PLC_Device("D10104");
+
+        PLC_Device PLC_Device_Vrms輸出 = new PLC_Device("D10110");
+        PLC_Device PLC_Device_Irms輸出 = new PLC_Device("D10112");
+        PLC_Device PLC_Device_電功率輸出 = new PLC_Device("D10114");
+        PLC_Device PLC_Device_漏電流輸出 = new PLC_Device("D10116");
+        PLC_Device PLC_Device_絕緣抵抗輸出 = new PLC_Device("D10118");
+        PLC_Device PLC_Device_電阻值輸出 = new PLC_Device("D10120");
+        PLC_Device PLC_Device_電暈數量輸出 = new PLC_Device("D10122");
+        PLC_Device PLC_Device_面積比輸出 = new PLC_Device("D10124");
+
+        string 第一站textBox_ACW量測值 = "F1", 第二站textBox_ACW量測值 = "F2", 第三站textBox_ACW量測值 = "F3", 第四站textBox_ACW量測值 = "F4", 第五站textBox_ACW量測值 = "F5";
+        string 第一站textBox_IR絕緣量測值, 第二站textBox_IR絕緣量測值, 第三站textBox_IR絕緣量測值, 第四站textBox_IR絕緣量測值, 第五站textBox_IR絕緣量測值;
+
+        string 輸出textBox_ACW量測值;
+        string 輸出textBox_IR絕緣量測值;
+
+        private void sub_輸出報表資料暫存運算()
+        {
+
+
+            if (PLC_Device_電功率站測試次數.Value == 1)
+            {
+                PLC_Device_第1次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
+                PLC_Device_第1次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
+                PLC_Device_第1次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
+            }
+            if (PLC_Device_耐壓站測試次數.Value == 1)
+            {
+                //第一站textBox_ACW量測值 = textBox_ACW量測值.Text;
+                //第一站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
+            }
+            if (PLC_Device_匝間站測試次數.Value == 1)
+            {
+                PLC_Device_第1次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
+                PLC_Device_第1次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
+                PLC_Device_第1次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
+
+                PLC_Device_電阻值輸出.Value = PLC_Device_第1次電阻值暫存.Value;
+                PLC_Device_電暈數量輸出.Value = PLC_Device_第1次電暈數量暫存.Value;
+                PLC_Device_面積比輸出.Value = PLC_Device_第1次面積比暫存.Value;
+            }
+
+            if (PLC_Device_電功率站測試次數.Value == 2)
+            {
+                PLC_Device_第2次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
+                PLC_Device_第2次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
+                PLC_Device_第2次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
+            }
+            if (PLC_Device_耐壓站測試次數.Value == 2)
+            {
+                //第二站textBox_ACW量測值 = textBox_ACW量測值.Text;
+                //第二站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
+            }
+            if (PLC_Device_匝間站測試次數.Value == 2)
+            {
+                PLC_Device_第2次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
+                PLC_Device_第2次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
+                PLC_Device_第2次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
+
+                PLC_Device_電阻值輸出.Value = PLC_Device_第2次電阻值暫存.Value;
+                PLC_Device_電暈數量輸出.Value = PLC_Device_第2次電暈數量暫存.Value;
+                PLC_Device_面積比輸出.Value = PLC_Device_第2次面積比暫存.Value;
+            }
+
+            if (PLC_Device_電功率站測試次數.Value == 3)
+            {
+                PLC_Device_第3次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
+                PLC_Device_第3次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
+                PLC_Device_第3次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
+            }
+            if (PLC_Device_耐壓站測試次數.Value == 3)
+            {
+                //第三站textBox_ACW量測值 = textBox_ACW量測值.Text;
+                //第三站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
+            }
+            if (PLC_Device_匝間站測試次數.Value == 3)
+            {
+                PLC_Device_第3次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
+                PLC_Device_第3次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
+                PLC_Device_第3次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
+
+                PLC_Device_電阻值輸出.Value = PLC_Device_第3次電阻值暫存.Value;
+                PLC_Device_電暈數量輸出.Value = PLC_Device_第3次電暈數量暫存.Value;
+                PLC_Device_面積比輸出.Value = PLC_Device_第3次面積比暫存.Value;
+            }
+
+            if (PLC_Device_電功率站測試次數.Value == 4)
+            {
+                PLC_Device_第4次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
+                PLC_Device_第4次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
+                PLC_Device_第4次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
+            }
+            if (PLC_Device_耐壓站測試次數.Value == 4)
+            {
+                //第四站textBox_ACW量測值 = textBox_ACW量測值.Text;
+                //第四站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
+            }
+            if (PLC_Device_匝間站測試次數.Value == 4)
+            {
+                PLC_Device_第4次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
+                PLC_Device_第4次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
+                PLC_Device_第4次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
+
+                PLC_Device_電阻值輸出.Value = PLC_Device_第4次電阻值暫存.Value;
+                PLC_Device_電暈數量輸出.Value = PLC_Device_第4次電暈數量暫存.Value;
+                PLC_Device_面積比輸出.Value = PLC_Device_第4次面積比暫存.Value;
+            }
+
+            if (PLC_Device_電功率站測試次數.Value == 5)
+            {
+                PLC_Device_第5次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
+                PLC_Device_第5次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
+                PLC_Device_第5次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
+            }
+            if (PLC_Device_耐壓站測試次數.Value == 5)
+            {
+                //第五站textBox_ACW量測值 = textBox_ACW量測值.Text;
+                //第五站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
+            }
+            if (PLC_Device_匝間站測試次數.Value == 5)
+            {
+                PLC_Device_第5次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
+                PLC_Device_第5次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
+                PLC_Device_第5次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
+
+                PLC_Device_電阻值輸出.Value = PLC_Device_第5次電阻值暫存.Value;
+                PLC_Device_電暈數量輸出.Value = PLC_Device_第5次電暈數量暫存.Value;
+                PLC_Device_面積比輸出.Value = PLC_Device_第5次面積比暫存.Value;
+            }
+
+
+            if(PLC_Device_輸出數值站測試次數.Value == 1)
+            {
+                輸出textBox_ACW量測值 = 第一站textBox_ACW量測值;
+                輸出textBox_IR絕緣量測值 = 第一站textBox_IR絕緣量測值;
+            }
+            if (PLC_Device_輸出數值站測試次數.Value == 2)
+            {
+                輸出textBox_ACW量測值 = 第二站textBox_ACW量測值;
+                輸出textBox_IR絕緣量測值 = 第二站textBox_IR絕緣量測值;
+            }
+            if (PLC_Device_輸出數值站測試次數.Value == 3)
+            {
+                輸出textBox_ACW量測值 = 第三站textBox_ACW量測值;
+                輸出textBox_IR絕緣量測值 = 第三站textBox_IR絕緣量測值;
+            }
+            if (PLC_Device_輸出數值站測試次數.Value == 4)
+            {
+                輸出textBox_ACW量測值 = 第四站textBox_ACW量測值;
+                輸出textBox_IR絕緣量測值 = 第四站textBox_IR絕緣量測值;
+            }
+            if (PLC_Device_輸出數值站測試次數.Value == 5)
+            {
+                輸出textBox_ACW量測值 = 第五站textBox_ACW量測值;
+                輸出textBox_IR絕緣量測值 = 第五站textBox_IR絕緣量測值;
+            }
         }
 
     }
