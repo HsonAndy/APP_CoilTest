@@ -937,6 +937,14 @@
             this.plC_ScreenButton23 = new MyUI.PLC_ScreenButton();
             this.plC_ScreenButton24 = new MyUI.PLC_ScreenButton();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.plC_RJ_Button_匯出 = new MyUI.PLC_RJ_Button();
+            this.textBox_規格 = new System.Windows.Forms.TextBox();
+            this.rJ_DatePicker_結束時間 = new MyUI.RJ_DatePicker();
+            this.rJ_DatePicker_起始時間 = new MyUI.RJ_DatePicker();
+            this.plC_RJ_Button_顯示全部 = new MyUI.PLC_RJ_Button();
+            this.plC_RJ_Button_刪除資料 = new MyUI.PLC_RJ_Button();
+            this.plC_RJ_Button_更新資料 = new MyUI.PLC_RJ_Button();
+            this.plC_RJ_Button_新增資料 = new MyUI.PLC_RJ_Button();
             this.sqL_DataGridView_線圈測試結果 = new SQLUI.SQL_DataGridView();
             this.panel25 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel151 = new System.Windows.Forms.TableLayoutPanel();
@@ -993,14 +1001,7 @@
             this.plC_AlarmFlow3 = new MyUI.PLC_AlarmFlow();
             this.openFileDialog_LoadExcel = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_SaveExcel = new System.Windows.Forms.SaveFileDialog();
-            this.plC_RJ_Button_新增資料 = new MyUI.PLC_RJ_Button();
-            this.plC_RJ_Button_更新資料 = new MyUI.PLC_RJ_Button();
-            this.plC_RJ_Button_刪除資料 = new MyUI.PLC_RJ_Button();
-            this.plC_RJ_Button_顯示全部 = new MyUI.PLC_RJ_Button();
-            this.rJ_DatePicker_起始時間 = new MyUI.RJ_DatePicker();
-            this.rJ_DatePicker_結束時間 = new MyUI.RJ_DatePicker();
-            this.textBox_規格 = new System.Windows.Forms.TextBox();
-            this.plC_RJ_Button_匯出 = new MyUI.PLC_RJ_Button();
+            this.plC_RJ_Button1 = new MyUI.PLC_RJ_Button();
             this.plC_ScreenPage1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.plC_RJ_GroupBox39.ContentsPanel.SuspendLayout();
@@ -1465,7 +1466,7 @@
             // 
             // rJ_Lable119
             // 
-            this.rJ_Lable119.BackColor = System.Drawing.Color.Gray;
+            this.rJ_Lable119.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable119.BackgroundColor = System.Drawing.Color.Gray;
             this.rJ_Lable119.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable119.BorderRadius = 12;
@@ -1507,7 +1508,7 @@
             // 
             // rJ_Lable117
             // 
-            this.rJ_Lable117.BackColor = System.Drawing.Color.Gray;
+            this.rJ_Lable117.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable117.BackgroundColor = System.Drawing.Color.Gray;
             this.rJ_Lable117.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable117.BorderRadius = 12;
@@ -1532,7 +1533,7 @@
             // 
             // plC_RJ_GroupBox39.ContentsPanel
             // 
-            this.plC_RJ_GroupBox39.ContentsPanel.BackColor = System.Drawing.Color.White;
+            this.plC_RJ_GroupBox39.ContentsPanel.BackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox39.ContentsPanel.BackgroundColor = System.Drawing.Color.Transparent;
             this.plC_RJ_GroupBox39.ContentsPanel.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.plC_RJ_GroupBox39.ContentsPanel.BorderRadius = 5;
@@ -1551,13 +1552,13 @@
             this.plC_RJ_GroupBox39.GUID = "";
             this.plC_RJ_GroupBox39.Location = new System.Drawing.Point(1157, 589);
             this.plC_RJ_GroupBox39.Name = "plC_RJ_GroupBox39";
-            this.plC_RJ_GroupBox39.PannelBackColor = System.Drawing.Color.White;
+            this.plC_RJ_GroupBox39.PannelBackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox39.PannelBorderColor = System.Drawing.Color.DeepSkyBlue;
             this.plC_RJ_GroupBox39.PannelBorderRadius = 5;
             this.plC_RJ_GroupBox39.PannelBorderSize = 0;
             this.plC_RJ_GroupBox39.Size = new System.Drawing.Size(209, 125);
             this.plC_RJ_GroupBox39.TabIndex = 138;
-            this.plC_RJ_GroupBox39.TitleBackColor = System.Drawing.Color.DodgerBlue;
+            this.plC_RJ_GroupBox39.TitleBackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox39.TitleBorderColor = System.Drawing.Color.PaleVioletRed;
             this.plC_RJ_GroupBox39.TitleBorderRadius = 5;
             this.plC_RJ_GroupBox39.TitleBorderSize = 0;
@@ -1632,7 +1633,7 @@
             // 
             // rJ_Lable116
             // 
-            this.rJ_Lable116.BackColor = System.Drawing.Color.Gray;
+            this.rJ_Lable116.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable116.BackgroundColor = System.Drawing.Color.Gray;
             this.rJ_Lable116.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable116.BorderRadius = 12;
@@ -1653,7 +1654,7 @@
             // 
             // rJ_Lable118
             // 
-            this.rJ_Lable118.BackColor = System.Drawing.Color.Gray;
+            this.rJ_Lable118.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable118.BackgroundColor = System.Drawing.Color.Gray;
             this.rJ_Lable118.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable118.BorderRadius = 12;
@@ -1915,7 +1916,7 @@
             // 
             // plC_RJ_GroupBox31.ContentsPanel
             // 
-            this.plC_RJ_GroupBox31.ContentsPanel.BackColor = System.Drawing.Color.White;
+            this.plC_RJ_GroupBox31.ContentsPanel.BackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox31.ContentsPanel.BackgroundColor = System.Drawing.Color.Transparent;
             this.plC_RJ_GroupBox31.ContentsPanel.BorderColor = System.Drawing.Color.SkyBlue;
             this.plC_RJ_GroupBox31.ContentsPanel.BorderRadius = 5;
@@ -1947,7 +1948,7 @@
             this.plC_RJ_GroupBox31.GUID = "";
             this.plC_RJ_GroupBox31.Location = new System.Drawing.Point(8, 488);
             this.plC_RJ_GroupBox31.Name = "plC_RJ_GroupBox31";
-            this.plC_RJ_GroupBox31.PannelBackColor = System.Drawing.Color.White;
+            this.plC_RJ_GroupBox31.PannelBackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox31.PannelBorderColor = System.Drawing.Color.SkyBlue;
             this.plC_RJ_GroupBox31.PannelBorderRadius = 5;
             this.plC_RJ_GroupBox31.PannelBorderSize = 0;
@@ -2112,7 +2113,7 @@
             // 
             // rJ_Lable53
             // 
-            this.rJ_Lable53.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable53.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable53.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable53.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable53.BorderRadius = 12;
@@ -2288,7 +2289,7 @@
             // 
             // plC_RJ_GroupBox30.ContentsPanel
             // 
-            this.plC_RJ_GroupBox30.ContentsPanel.BackColor = System.Drawing.Color.White;
+            this.plC_RJ_GroupBox30.ContentsPanel.BackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox30.ContentsPanel.BackgroundColor = System.Drawing.Color.Transparent;
             this.plC_RJ_GroupBox30.ContentsPanel.BorderColor = System.Drawing.Color.SkyBlue;
             this.plC_RJ_GroupBox30.ContentsPanel.BorderRadius = 5;
@@ -2328,7 +2329,7 @@
             this.plC_RJ_GroupBox30.GUID = "";
             this.plC_RJ_GroupBox30.Location = new System.Drawing.Point(574, 488);
             this.plC_RJ_GroupBox30.Name = "plC_RJ_GroupBox30";
-            this.plC_RJ_GroupBox30.PannelBackColor = System.Drawing.Color.White;
+            this.plC_RJ_GroupBox30.PannelBackColor = System.Drawing.SystemColors.Control;
             this.plC_RJ_GroupBox30.PannelBorderColor = System.Drawing.Color.SkyBlue;
             this.plC_RJ_GroupBox30.PannelBorderRadius = 5;
             this.plC_RJ_GroupBox30.PannelBorderSize = 0;
@@ -2355,7 +2356,7 @@
             // 
             // rJ_Lable65
             // 
-            this.rJ_Lable65.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable65.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable65.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable65.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable65.BorderRadius = 12;
@@ -2452,7 +2453,7 @@
             // 
             // rJ_Lable64
             // 
-            this.rJ_Lable64.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable64.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable64.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable64.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable64.BorderRadius = 12;
@@ -2494,7 +2495,7 @@
             // 
             // rJ_Lable62
             // 
-            this.rJ_Lable62.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable62.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable62.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable62.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable62.BorderRadius = 12;
@@ -2547,7 +2548,7 @@
             // 
             // rJ_Lable63
             // 
-            this.rJ_Lable63.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable63.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable63.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable63.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable63.BorderRadius = 12;
@@ -2634,7 +2635,7 @@
             // 
             // rJ_Lable60
             // 
-            this.rJ_Lable60.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable60.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable60.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable60.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable60.BorderRadius = 12;
@@ -2676,7 +2677,7 @@
             // 
             // rJ_Lable61
             // 
-            this.rJ_Lable61.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable61.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable61.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable61.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable61.BorderRadius = 12;
@@ -2739,7 +2740,7 @@
             // 
             // rJ_Lable59
             // 
-            this.rJ_Lable59.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable59.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable59.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable59.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable59.BorderRadius = 12;
@@ -2791,7 +2792,7 @@
             // 
             // rJ_Lable58
             // 
-            this.rJ_Lable58.BackColor = System.Drawing.Color.Silver;
+            this.rJ_Lable58.BackColor = System.Drawing.SystemColors.Control;
             this.rJ_Lable58.BackgroundColor = System.Drawing.Color.Silver;
             this.rJ_Lable58.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rJ_Lable58.BorderRadius = 12;
@@ -14273,7 +14274,7 @@
             this.tableLayoutPanel65.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel65.ColumnCount = 2;
             this.tableLayoutPanel65.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel65.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel65.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel65.Controls.Add(this.plC_Button65, 0, 0);
             this.tableLayoutPanel65.Controls.Add(this.label65, 1, 0);
             this.tableLayoutPanel65.Location = new System.Drawing.Point(2, 326);
@@ -14327,7 +14328,7 @@
             this.label65.Location = new System.Drawing.Point(50, 1);
             this.label65.Name = "label65";
             this.label65.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label65.Size = new System.Drawing.Size(342, 42);
+            this.label65.Size = new System.Drawing.Size(343, 42);
             this.label65.TabIndex = 8;
             this.label65.Text = "Y37 : 入料夾持鬆開";
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14337,7 +14338,7 @@
             this.tableLayoutPanel66.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel66.ColumnCount = 2;
             this.tableLayoutPanel66.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel66.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel66.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel66.Controls.Add(this.plC_Button66, 0, 0);
             this.tableLayoutPanel66.Controls.Add(this.label66, 1, 0);
             this.tableLayoutPanel66.Location = new System.Drawing.Point(2, 280);
@@ -14391,7 +14392,7 @@
             this.label66.Location = new System.Drawing.Point(50, 1);
             this.label66.Name = "label66";
             this.label66.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label66.Size = new System.Drawing.Size(342, 42);
+            this.label66.Size = new System.Drawing.Size(343, 42);
             this.label66.TabIndex = 8;
             this.label66.Text = "Y36 : 備用";
             this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14401,7 +14402,7 @@
             this.tableLayoutPanel67.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel67.ColumnCount = 2;
             this.tableLayoutPanel67.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel67.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel67.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel67.Controls.Add(this.plC_Button67, 0, 0);
             this.tableLayoutPanel67.Controls.Add(this.label67, 1, 0);
             this.tableLayoutPanel67.Location = new System.Drawing.Point(2, 234);
@@ -14455,7 +14456,7 @@
             this.label67.Location = new System.Drawing.Point(50, 1);
             this.label67.Name = "label67";
             this.label67.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label67.Size = new System.Drawing.Size(342, 42);
+            this.label67.Size = new System.Drawing.Size(343, 42);
             this.label67.TabIndex = 8;
             this.label67.Text = "Y35 : NG蓋章3";
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14465,7 +14466,7 @@
             this.tableLayoutPanel68.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel68.ColumnCount = 2;
             this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel68.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel68.Controls.Add(this.plC_Button68, 0, 0);
             this.tableLayoutPanel68.Controls.Add(this.label68, 1, 0);
             this.tableLayoutPanel68.Location = new System.Drawing.Point(2, 188);
@@ -14519,7 +14520,7 @@
             this.label68.Location = new System.Drawing.Point(50, 1);
             this.label68.Name = "label68";
             this.label68.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label68.Size = new System.Drawing.Size(342, 42);
+            this.label68.Size = new System.Drawing.Size(343, 42);
             this.label68.TabIndex = 8;
             this.label68.Text = "Y34 : NG蓋章4";
             this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14529,7 +14530,7 @@
             this.tableLayoutPanel69.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel69.ColumnCount = 2;
             this.tableLayoutPanel69.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel69.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel69.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel69.Controls.Add(this.plC_Button69, 0, 0);
             this.tableLayoutPanel69.Controls.Add(this.label69, 1, 0);
             this.tableLayoutPanel69.Location = new System.Drawing.Point(2, 142);
@@ -14583,7 +14584,7 @@
             this.label69.Location = new System.Drawing.Point(50, 1);
             this.label69.Name = "label69";
             this.label69.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label69.Size = new System.Drawing.Size(342, 42);
+            this.label69.Size = new System.Drawing.Size(343, 42);
             this.label69.TabIndex = 8;
             this.label69.Text = "Y33 : NG蓋章5";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14593,7 +14594,7 @@
             this.tableLayoutPanel70.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel70.ColumnCount = 2;
             this.tableLayoutPanel70.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel70.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel70.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel70.Controls.Add(this.plC_Button70, 0, 0);
             this.tableLayoutPanel70.Controls.Add(this.label70, 1, 0);
             this.tableLayoutPanel70.Location = new System.Drawing.Point(2, 96);
@@ -14647,7 +14648,7 @@
             this.label70.Location = new System.Drawing.Point(50, 1);
             this.label70.Name = "label70";
             this.label70.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label70.Size = new System.Drawing.Size(342, 42);
+            this.label70.Size = new System.Drawing.Size(343, 42);
             this.label70.TabIndex = 8;
             this.label70.Text = "Y32 : NG蓋章印泥進退";
             this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14657,7 +14658,7 @@
             this.tableLayoutPanel71.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel71.ColumnCount = 2;
             this.tableLayoutPanel71.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel71.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel71.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel71.Controls.Add(this.plC_Button71, 0, 0);
             this.tableLayoutPanel71.Controls.Add(this.label71, 1, 0);
             this.tableLayoutPanel71.Location = new System.Drawing.Point(2, 49);
@@ -14711,7 +14712,7 @@
             this.label71.Location = new System.Drawing.Point(50, 1);
             this.label71.Name = "label71";
             this.label71.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label71.Size = new System.Drawing.Size(342, 42);
+            this.label71.Size = new System.Drawing.Size(343, 42);
             this.label71.TabIndex = 8;
             this.label71.Text = "Y31 : 成品組蓋上下";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14721,7 +14722,7 @@
             this.tableLayoutPanel72.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel72.ColumnCount = 2;
             this.tableLayoutPanel72.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel72.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel72.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel72.Controls.Add(this.plC_Button72, 0, 0);
             this.tableLayoutPanel72.Controls.Add(this.label72, 1, 0);
             this.tableLayoutPanel72.Location = new System.Drawing.Point(2, 3);
@@ -14775,7 +14776,7 @@
             this.label72.Location = new System.Drawing.Point(50, 1);
             this.label72.Name = "label72";
             this.label72.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label72.Size = new System.Drawing.Size(342, 42);
+            this.label72.Size = new System.Drawing.Size(343, 42);
             this.label72.TabIndex = 8;
             this.label72.Text = "Y30 : 成品組蓋進退";
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14801,7 +14802,7 @@
             this.tableLayoutPanel73.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel73.ColumnCount = 2;
             this.tableLayoutPanel73.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel73.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel73.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel73.Controls.Add(this.plC_Button73, 0, 0);
             this.tableLayoutPanel73.Controls.Add(this.label73, 1, 0);
             this.tableLayoutPanel73.Location = new System.Drawing.Point(2, 326);
@@ -14855,7 +14856,7 @@
             this.label73.Location = new System.Drawing.Point(50, 1);
             this.label73.Name = "label73";
             this.label73.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label73.Size = new System.Drawing.Size(342, 42);
+            this.label73.Size = new System.Drawing.Size(343, 42);
             this.label73.TabIndex = 8;
             this.label73.Text = "Y17 : 10式匝間檢測上下2";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14865,7 +14866,7 @@
             this.tableLayoutPanel74.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel74.ColumnCount = 2;
             this.tableLayoutPanel74.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel74.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel74.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel74.Controls.Add(this.plC_Button74, 0, 0);
             this.tableLayoutPanel74.Controls.Add(this.label74, 1, 0);
             this.tableLayoutPanel74.Location = new System.Drawing.Point(2, 280);
@@ -14919,7 +14920,7 @@
             this.label74.Location = new System.Drawing.Point(50, 1);
             this.label74.Name = "label74";
             this.label74.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label74.Size = new System.Drawing.Size(342, 42);
+            this.label74.Size = new System.Drawing.Size(343, 42);
             this.label74.TabIndex = 8;
             this.label74.Text = "Y16 : 10式匝間檢測上下1";
             this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14929,7 +14930,7 @@
             this.tableLayoutPanel75.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel75.ColumnCount = 2;
             this.tableLayoutPanel75.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel75.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel75.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel75.Controls.Add(this.plC_Button75, 0, 0);
             this.tableLayoutPanel75.Controls.Add(this.label75, 1, 0);
             this.tableLayoutPanel75.Location = new System.Drawing.Point(2, 234);
@@ -14983,7 +14984,7 @@
             this.label75.Location = new System.Drawing.Point(50, 1);
             this.label75.Name = "label75";
             this.label75.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label75.Size = new System.Drawing.Size(342, 42);
+            this.label75.Size = new System.Drawing.Size(343, 42);
             this.label75.TabIndex = 8;
             this.label75.Text = "Y15 : NG件夾持鬆開";
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -14993,7 +14994,7 @@
             this.tableLayoutPanel76.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel76.ColumnCount = 2;
             this.tableLayoutPanel76.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel76.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel76.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel76.Controls.Add(this.plC_Button76, 0, 0);
             this.tableLayoutPanel76.Controls.Add(this.label76, 1, 0);
             this.tableLayoutPanel76.Location = new System.Drawing.Point(2, 188);
@@ -15047,7 +15048,7 @@
             this.label76.Location = new System.Drawing.Point(50, 1);
             this.label76.Name = "label76";
             this.label76.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label76.Size = new System.Drawing.Size(342, 42);
+            this.label76.Size = new System.Drawing.Size(343, 42);
             this.label76.TabIndex = 8;
             this.label76.Text = "Y14 : NG蓋章1";
             this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15057,7 +15058,7 @@
             this.tableLayoutPanel77.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel77.ColumnCount = 2;
             this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel77.Controls.Add(this.plC_Button77, 0, 0);
             this.tableLayoutPanel77.Controls.Add(this.label77, 1, 0);
             this.tableLayoutPanel77.Location = new System.Drawing.Point(2, 142);
@@ -15111,7 +15112,7 @@
             this.label77.Location = new System.Drawing.Point(50, 1);
             this.label77.Name = "label77";
             this.label77.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label77.Size = new System.Drawing.Size(342, 42);
+            this.label77.Size = new System.Drawing.Size(343, 42);
             this.label77.TabIndex = 8;
             this.label77.Text = "Y13 : NG蓋章2";
             this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15121,7 +15122,7 @@
             this.tableLayoutPanel78.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel78.ColumnCount = 2;
             this.tableLayoutPanel78.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel78.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel78.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel78.Controls.Add(this.plC_Button78, 0, 0);
             this.tableLayoutPanel78.Controls.Add(this.label78, 1, 0);
             this.tableLayoutPanel78.Location = new System.Drawing.Point(2, 96);
@@ -15175,7 +15176,7 @@
             this.label78.Location = new System.Drawing.Point(50, 1);
             this.label78.Name = "label78";
             this.label78.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label78.Size = new System.Drawing.Size(342, 42);
+            this.label78.Size = new System.Drawing.Size(343, 42);
             this.label78.TabIndex = 8;
             this.label78.Text = "Y12 : 備用";
             this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15185,7 +15186,7 @@
             this.tableLayoutPanel79.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel79.ColumnCount = 2;
             this.tableLayoutPanel79.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel79.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel79.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel79.Controls.Add(this.plC_Button79, 0, 0);
             this.tableLayoutPanel79.Controls.Add(this.label79, 1, 0);
             this.tableLayoutPanel79.Location = new System.Drawing.Point(2, 49);
@@ -15239,7 +15240,7 @@
             this.label79.Location = new System.Drawing.Point(50, 1);
             this.label79.Name = "label79";
             this.label79.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label79.Size = new System.Drawing.Size(342, 42);
+            this.label79.Size = new System.Drawing.Size(343, 42);
             this.label79.TabIndex = 8;
             this.label79.Text = "Y11 : 入料導正夾爪";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15249,7 +15250,7 @@
             this.tableLayoutPanel80.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel80.ColumnCount = 2;
             this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel80.Controls.Add(this.plC_Button80, 0, 0);
             this.tableLayoutPanel80.Controls.Add(this.label80, 1, 0);
             this.tableLayoutPanel80.Location = new System.Drawing.Point(2, 3);
@@ -15303,7 +15304,7 @@
             this.label80.Location = new System.Drawing.Point(50, 1);
             this.label80.Name = "label80";
             this.label80.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label80.Size = new System.Drawing.Size(342, 42);
+            this.label80.Size = new System.Drawing.Size(343, 42);
             this.label80.TabIndex = 8;
             this.label80.Text = "Y10 : 入料導正前進";
             this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15329,7 +15330,7 @@
             this.tableLayoutPanel81.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel81.ColumnCount = 2;
             this.tableLayoutPanel81.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel81.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel81.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel81.Controls.Add(this.plC_Button81, 0, 0);
             this.tableLayoutPanel81.Controls.Add(this.label81, 1, 0);
             this.tableLayoutPanel81.Location = new System.Drawing.Point(2, 326);
@@ -15383,7 +15384,7 @@
             this.label81.Location = new System.Drawing.Point(50, 1);
             this.label81.Name = "label81";
             this.label81.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label81.Size = new System.Drawing.Size(342, 42);
+            this.label81.Size = new System.Drawing.Size(343, 42);
             this.label81.TabIndex = 8;
             this.label81.Text = "Y27 : O環取料上下";
             this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15393,7 +15394,7 @@
             this.tableLayoutPanel82.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel82.ColumnCount = 2;
             this.tableLayoutPanel82.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel82.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel82.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel82.Controls.Add(this.plC_Button82, 0, 0);
             this.tableLayoutPanel82.Controls.Add(this.label82, 1, 0);
             this.tableLayoutPanel82.Location = new System.Drawing.Point(2, 280);
@@ -15447,7 +15448,7 @@
             this.label82.Location = new System.Drawing.Point(50, 1);
             this.label82.Name = "label82";
             this.label82.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label82.Size = new System.Drawing.Size(342, 42);
+            this.label82.Size = new System.Drawing.Size(343, 42);
             this.label82.TabIndex = 8;
             this.label82.Text = "Y26 : O環組裝進退";
             this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15457,7 +15458,7 @@
             this.tableLayoutPanel83.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel83.ColumnCount = 2;
             this.tableLayoutPanel83.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel83.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel83.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel83.Controls.Add(this.plC_Button83, 0, 0);
             this.tableLayoutPanel83.Controls.Add(this.label83, 1, 0);
             this.tableLayoutPanel83.Location = new System.Drawing.Point(2, 234);
@@ -15511,7 +15512,7 @@
             this.label83.Location = new System.Drawing.Point(50, 1);
             this.label83.Name = "label83";
             this.label83.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label83.Size = new System.Drawing.Size(342, 42);
+            this.label83.Size = new System.Drawing.Size(343, 42);
             this.label83.TabIndex = 8;
             this.label83.Text = "Y25 : O環分料";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15521,7 +15522,7 @@
             this.tableLayoutPanel84.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel84.ColumnCount = 2;
             this.tableLayoutPanel84.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel84.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel84.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel84.Controls.Add(this.plC_Button84, 0, 0);
             this.tableLayoutPanel84.Controls.Add(this.label84, 1, 0);
             this.tableLayoutPanel84.Location = new System.Drawing.Point(2, 188);
@@ -15575,7 +15576,7 @@
             this.label84.Location = new System.Drawing.Point(50, 1);
             this.label84.Name = "label84";
             this.label84.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label84.Size = new System.Drawing.Size(342, 42);
+            this.label84.Size = new System.Drawing.Size(343, 42);
             this.label84.TabIndex = 8;
             this.label84.Text = "Y24 : 備用";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15585,7 +15586,7 @@
             this.tableLayoutPanel85.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel85.ColumnCount = 2;
             this.tableLayoutPanel85.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel85.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel85.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel85.Controls.Add(this.plC_Button85, 0, 0);
             this.tableLayoutPanel85.Controls.Add(this.label85, 1, 0);
             this.tableLayoutPanel85.Location = new System.Drawing.Point(2, 142);
@@ -15639,7 +15640,7 @@
             this.label85.Location = new System.Drawing.Point(50, 1);
             this.label85.Name = "label85";
             this.label85.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label85.Size = new System.Drawing.Size(342, 42);
+            this.label85.Size = new System.Drawing.Size(343, 42);
             this.label85.TabIndex = 8;
             this.label85.Text = "Y23 : 10式電功率探針上下";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15649,7 +15650,7 @@
             this.tableLayoutPanel86.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel86.ColumnCount = 2;
             this.tableLayoutPanel86.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel86.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel86.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel86.Controls.Add(this.plC_Button86, 0, 0);
             this.tableLayoutPanel86.Controls.Add(this.label86, 1, 0);
             this.tableLayoutPanel86.Location = new System.Drawing.Point(2, 96);
@@ -15703,7 +15704,7 @@
             this.label86.Location = new System.Drawing.Point(50, 1);
             this.label86.Name = "label86";
             this.label86.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label86.Size = new System.Drawing.Size(342, 42);
+            this.label86.Size = new System.Drawing.Size(343, 42);
             this.label86.TabIndex = 8;
             this.label86.Text = "Y22 : 10式電功率磁管上下";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15713,7 +15714,7 @@
             this.tableLayoutPanel87.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel87.ColumnCount = 2;
             this.tableLayoutPanel87.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel87.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel87.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel87.Controls.Add(this.plC_Button87, 0, 0);
             this.tableLayoutPanel87.Controls.Add(this.label87, 1, 0);
             this.tableLayoutPanel87.Location = new System.Drawing.Point(2, 49);
@@ -15767,7 +15768,7 @@
             this.label87.Location = new System.Drawing.Point(50, 1);
             this.label87.Name = "label87";
             this.label87.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label87.Size = new System.Drawing.Size(342, 42);
+            this.label87.Size = new System.Drawing.Size(343, 42);
             this.label87.TabIndex = 8;
             this.label87.Text = "Y21 : 10式耐壓/絕緣銅刷上下";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15777,7 +15778,7 @@
             this.tableLayoutPanel88.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel88.ColumnCount = 2;
             this.tableLayoutPanel88.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel88.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel88.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel88.Controls.Add(this.plC_Button88, 0, 0);
             this.tableLayoutPanel88.Controls.Add(this.label88, 1, 0);
             this.tableLayoutPanel88.Location = new System.Drawing.Point(2, 3);
@@ -15831,7 +15832,7 @@
             this.label88.Location = new System.Drawing.Point(50, 1);
             this.label88.Name = "label88";
             this.label88.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label88.Size = new System.Drawing.Size(342, 42);
+            this.label88.Size = new System.Drawing.Size(343, 42);
             this.label88.TabIndex = 8;
             this.label88.Text = "Y20 : 10式耐壓/絕緣銅刷上下";
             this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15857,7 +15858,7 @@
             this.tableLayoutPanel89.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel89.ColumnCount = 2;
             this.tableLayoutPanel89.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel89.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel89.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel89.Controls.Add(this.plC_Button89, 0, 0);
             this.tableLayoutPanel89.Controls.Add(this.label89, 1, 0);
             this.tableLayoutPanel89.Location = new System.Drawing.Point(2, 326);
@@ -15911,7 +15912,7 @@
             this.label89.Location = new System.Drawing.Point(50, 1);
             this.label89.Name = "label89";
             this.label89.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label89.Size = new System.Drawing.Size(342, 42);
+            this.label89.Size = new System.Drawing.Size(343, 42);
             this.label89.TabIndex = 8;
             this.label89.Text = "Y07 : 20式電功率探針夾爪";
             this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15921,7 +15922,7 @@
             this.tableLayoutPanel90.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel90.ColumnCount = 2;
             this.tableLayoutPanel90.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel90.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel90.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel90.Controls.Add(this.plC_Button90, 0, 0);
             this.tableLayoutPanel90.Controls.Add(this.label90, 1, 0);
             this.tableLayoutPanel90.Location = new System.Drawing.Point(2, 280);
@@ -15975,7 +15976,7 @@
             this.label90.Location = new System.Drawing.Point(50, 1);
             this.label90.Name = "label90";
             this.label90.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label90.Size = new System.Drawing.Size(342, 42);
+            this.label90.Size = new System.Drawing.Size(343, 42);
             this.label90.TabIndex = 8;
             this.label90.Text = "Y06 : 20式電功率探針進退";
             this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15985,7 +15986,7 @@
             this.tableLayoutPanel91.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel91.ColumnCount = 2;
             this.tableLayoutPanel91.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel91.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel91.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel91.Controls.Add(this.plC_Button91, 0, 0);
             this.tableLayoutPanel91.Controls.Add(this.label91, 1, 0);
             this.tableLayoutPanel91.Location = new System.Drawing.Point(2, 234);
@@ -16039,7 +16040,7 @@
             this.label91.Location = new System.Drawing.Point(50, 1);
             this.label91.Name = "label91";
             this.label91.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label91.Size = new System.Drawing.Size(342, 42);
+            this.label91.Size = new System.Drawing.Size(343, 42);
             this.label91.TabIndex = 8;
             this.label91.Text = "Y05 : 20式耐壓/絕緣測地上下";
             this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16049,7 +16050,7 @@
             this.tableLayoutPanel92.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel92.ColumnCount = 2;
             this.tableLayoutPanel92.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel92.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel92.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel92.Controls.Add(this.plC_Button92, 0, 0);
             this.tableLayoutPanel92.Controls.Add(this.label92, 1, 0);
             this.tableLayoutPanel92.Location = new System.Drawing.Point(2, 188);
@@ -16103,7 +16104,7 @@
             this.label92.Location = new System.Drawing.Point(50, 1);
             this.label92.Name = "label92";
             this.label92.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label92.Size = new System.Drawing.Size(342, 42);
+            this.label92.Size = new System.Drawing.Size(343, 42);
             this.label92.TabIndex = 8;
             this.label92.Text = "Y04 : 20式耐壓/絕緣探針夾爪";
             this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16113,7 +16114,7 @@
             this.tableLayoutPanel93.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel93.ColumnCount = 2;
             this.tableLayoutPanel93.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel93.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel93.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel93.Controls.Add(this.plC_Button93, 0, 0);
             this.tableLayoutPanel93.Controls.Add(this.label93, 1, 0);
             this.tableLayoutPanel93.Location = new System.Drawing.Point(2, 142);
@@ -16167,7 +16168,7 @@
             this.label93.Location = new System.Drawing.Point(50, 1);
             this.label93.Name = "label93";
             this.label93.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label93.Size = new System.Drawing.Size(342, 42);
+            this.label93.Size = new System.Drawing.Size(343, 42);
             this.label93.TabIndex = 8;
             this.label93.Text = "Y03 : 20式耐壓/絕緣探針進退";
             this.label93.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16177,7 +16178,7 @@
             this.tableLayoutPanel94.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel94.ColumnCount = 2;
             this.tableLayoutPanel94.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel94.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel94.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel94.Controls.Add(this.plC_Button94, 0, 0);
             this.tableLayoutPanel94.Controls.Add(this.label94, 1, 0);
             this.tableLayoutPanel94.Location = new System.Drawing.Point(2, 96);
@@ -16231,7 +16232,7 @@
             this.label94.Location = new System.Drawing.Point(50, 1);
             this.label94.Name = "label94";
             this.label94.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label94.Size = new System.Drawing.Size(342, 42);
+            this.label94.Size = new System.Drawing.Size(343, 42);
             this.label94.TabIndex = 8;
             this.label94.Text = "Y02 : 20式匝間探針夾爪";
             this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16241,7 +16242,7 @@
             this.tableLayoutPanel95.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel95.ColumnCount = 2;
             this.tableLayoutPanel95.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel95.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel95.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel95.Controls.Add(this.plC_Button95, 0, 0);
             this.tableLayoutPanel95.Controls.Add(this.label95, 1, 0);
             this.tableLayoutPanel95.Location = new System.Drawing.Point(2, 49);
@@ -16295,7 +16296,7 @@
             this.label95.Location = new System.Drawing.Point(50, 1);
             this.label95.Name = "label95";
             this.label95.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label95.Size = new System.Drawing.Size(342, 42);
+            this.label95.Size = new System.Drawing.Size(343, 42);
             this.label95.TabIndex = 8;
             this.label95.Text = "Y01 : 20式匝間探針前進";
             this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16305,7 +16306,7 @@
             this.tableLayoutPanel96.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel96.ColumnCount = 2;
             this.tableLayoutPanel96.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel96.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel96.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel96.Controls.Add(this.plC_Button96, 0, 0);
             this.tableLayoutPanel96.Controls.Add(this.label96, 1, 0);
             this.tableLayoutPanel96.Location = new System.Drawing.Point(2, 3);
@@ -16359,7 +16360,7 @@
             this.label96.Location = new System.Drawing.Point(50, 1);
             this.label96.Name = "label96";
             this.label96.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label96.Size = new System.Drawing.Size(342, 42);
+            this.label96.Size = new System.Drawing.Size(343, 42);
             this.label96.TabIndex = 8;
             this.label96.Text = "Y00 : NG件推出下料";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16399,7 +16400,7 @@
             this.tableLayoutPanel97.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel97.ColumnCount = 2;
             this.tableLayoutPanel97.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel97.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel97.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel97.Controls.Add(this.plC_Button97, 0, 0);
             this.tableLayoutPanel97.Controls.Add(this.label97, 1, 0);
             this.tableLayoutPanel97.Location = new System.Drawing.Point(2, 326);
@@ -16453,7 +16454,7 @@
             this.label97.Location = new System.Drawing.Point(50, 1);
             this.label97.Name = "label97";
             this.label97.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label97.Size = new System.Drawing.Size(342, 42);
+            this.label97.Size = new System.Drawing.Size(343, 42);
             this.label97.TabIndex = 8;
             this.label97.Text = "Y77 : 備用";
             this.label97.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16463,7 +16464,7 @@
             this.tableLayoutPanel98.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel98.ColumnCount = 2;
             this.tableLayoutPanel98.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel98.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel98.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel98.Controls.Add(this.plC_Button98, 0, 0);
             this.tableLayoutPanel98.Controls.Add(this.label98, 1, 0);
             this.tableLayoutPanel98.Location = new System.Drawing.Point(2, 280);
@@ -16517,7 +16518,7 @@
             this.label98.Location = new System.Drawing.Point(50, 1);
             this.label98.Name = "label98";
             this.label98.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label98.Size = new System.Drawing.Size(342, 42);
+            this.label98.Size = new System.Drawing.Size(343, 42);
             this.label98.TabIndex = 8;
             this.label98.Text = "Y76 : 備用";
             this.label98.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16527,7 +16528,7 @@
             this.tableLayoutPanel99.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel99.ColumnCount = 2;
             this.tableLayoutPanel99.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel99.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel99.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel99.Controls.Add(this.plC_Button99, 0, 0);
             this.tableLayoutPanel99.Controls.Add(this.label99, 1, 0);
             this.tableLayoutPanel99.Location = new System.Drawing.Point(2, 234);
@@ -16581,7 +16582,7 @@
             this.label99.Location = new System.Drawing.Point(50, 1);
             this.label99.Name = "label99";
             this.label99.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label99.Size = new System.Drawing.Size(342, 42);
+            this.label99.Size = new System.Drawing.Size(343, 42);
             this.label99.TabIndex = 8;
             this.label99.Text = "Y75 : 備用";
             this.label99.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16591,7 +16592,7 @@
             this.tableLayoutPanel100.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel100.ColumnCount = 2;
             this.tableLayoutPanel100.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel100.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel100.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel100.Controls.Add(this.plC_Button100, 0, 0);
             this.tableLayoutPanel100.Controls.Add(this.label100, 1, 0);
             this.tableLayoutPanel100.Location = new System.Drawing.Point(2, 188);
@@ -16645,7 +16646,7 @@
             this.label100.Location = new System.Drawing.Point(50, 1);
             this.label100.Name = "label100";
             this.label100.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label100.Size = new System.Drawing.Size(342, 42);
+            this.label100.Size = new System.Drawing.Size(343, 42);
             this.label100.TabIndex = 8;
             this.label100.Text = "Y74 : 備用";
             this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16655,7 +16656,7 @@
             this.tableLayoutPanel101.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel101.ColumnCount = 2;
             this.tableLayoutPanel101.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel101.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel101.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel101.Controls.Add(this.plC_Button101, 0, 0);
             this.tableLayoutPanel101.Controls.Add(this.label101, 1, 0);
             this.tableLayoutPanel101.Location = new System.Drawing.Point(2, 142);
@@ -16709,7 +16710,7 @@
             this.label101.Location = new System.Drawing.Point(50, 1);
             this.label101.Name = "label101";
             this.label101.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label101.Size = new System.Drawing.Size(342, 42);
+            this.label101.Size = new System.Drawing.Size(343, 42);
             this.label101.TabIndex = 8;
             this.label101.Text = "Y73 : 備用";
             this.label101.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16719,7 +16720,7 @@
             this.tableLayoutPanel102.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel102.ColumnCount = 2;
             this.tableLayoutPanel102.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel102.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel102.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel102.Controls.Add(this.plC_Button102, 0, 0);
             this.tableLayoutPanel102.Controls.Add(this.label102, 1, 0);
             this.tableLayoutPanel102.Location = new System.Drawing.Point(2, 96);
@@ -16773,7 +16774,7 @@
             this.label102.Location = new System.Drawing.Point(50, 1);
             this.label102.Name = "label102";
             this.label102.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label102.Size = new System.Drawing.Size(342, 42);
+            this.label102.Size = new System.Drawing.Size(343, 42);
             this.label102.TabIndex = 8;
             this.label102.Text = "Y72 : 備用";
             this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16783,7 +16784,7 @@
             this.tableLayoutPanel103.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel103.ColumnCount = 2;
             this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel103.Controls.Add(this.plC_Button103, 0, 0);
             this.tableLayoutPanel103.Controls.Add(this.label103, 1, 0);
             this.tableLayoutPanel103.Location = new System.Drawing.Point(2, 49);
@@ -16837,7 +16838,7 @@
             this.label103.Location = new System.Drawing.Point(50, 1);
             this.label103.Name = "label103";
             this.label103.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label103.Size = new System.Drawing.Size(342, 42);
+            this.label103.Size = new System.Drawing.Size(343, 42);
             this.label103.TabIndex = 8;
             this.label103.Text = "Y71 : 備用";
             this.label103.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16847,7 +16848,7 @@
             this.tableLayoutPanel104.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel104.ColumnCount = 2;
             this.tableLayoutPanel104.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel104.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel104.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel104.Controls.Add(this.plC_Button104, 0, 0);
             this.tableLayoutPanel104.Controls.Add(this.label104, 1, 0);
             this.tableLayoutPanel104.Location = new System.Drawing.Point(2, 3);
@@ -16901,7 +16902,7 @@
             this.label104.Location = new System.Drawing.Point(50, 1);
             this.label104.Name = "label104";
             this.label104.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label104.Size = new System.Drawing.Size(342, 42);
+            this.label104.Size = new System.Drawing.Size(343, 42);
             this.label104.TabIndex = 8;
             this.label104.Text = "Y70 : 備用";
             this.label104.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16927,7 +16928,7 @@
             this.tableLayoutPanel105.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel105.ColumnCount = 2;
             this.tableLayoutPanel105.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel105.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel105.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel105.Controls.Add(this.plC_Button105, 0, 0);
             this.tableLayoutPanel105.Controls.Add(this.label105, 1, 0);
             this.tableLayoutPanel105.Location = new System.Drawing.Point(2, 326);
@@ -16981,7 +16982,7 @@
             this.label105.Location = new System.Drawing.Point(50, 1);
             this.label105.Name = "label105";
             this.label105.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label105.Size = new System.Drawing.Size(342, 42);
+            this.label105.Size = new System.Drawing.Size(343, 42);
             this.label105.TabIndex = 8;
             this.label105.Text = "Y57 : 備用";
             this.label105.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -16991,7 +16992,7 @@
             this.tableLayoutPanel106.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel106.ColumnCount = 2;
             this.tableLayoutPanel106.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel106.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel106.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel106.Controls.Add(this.plC_Button106, 0, 0);
             this.tableLayoutPanel106.Controls.Add(this.label106, 1, 0);
             this.tableLayoutPanel106.Location = new System.Drawing.Point(2, 280);
@@ -17045,7 +17046,7 @@
             this.label106.Location = new System.Drawing.Point(50, 1);
             this.label106.Name = "label106";
             this.label106.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label106.Size = new System.Drawing.Size(342, 42);
+            this.label106.Size = new System.Drawing.Size(343, 42);
             this.label106.TabIndex = 8;
             this.label106.Text = "Y56 : 備用";
             this.label106.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17055,7 +17056,7 @@
             this.tableLayoutPanel107.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel107.ColumnCount = 2;
             this.tableLayoutPanel107.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel107.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel107.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel107.Controls.Add(this.plC_Button107, 0, 0);
             this.tableLayoutPanel107.Controls.Add(this.label107, 1, 0);
             this.tableLayoutPanel107.Location = new System.Drawing.Point(2, 234);
@@ -17109,7 +17110,7 @@
             this.label107.Location = new System.Drawing.Point(50, 1);
             this.label107.Name = "label107";
             this.label107.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label107.Size = new System.Drawing.Size(342, 42);
+            this.label107.Size = new System.Drawing.Size(343, 42);
             this.label107.TabIndex = 8;
             this.label107.Text = "Y55 : 備用";
             this.label107.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17119,7 +17120,7 @@
             this.tableLayoutPanel108.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel108.ColumnCount = 2;
             this.tableLayoutPanel108.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel108.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel108.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel108.Controls.Add(this.plC_Button108, 0, 0);
             this.tableLayoutPanel108.Controls.Add(this.label108, 1, 0);
             this.tableLayoutPanel108.Location = new System.Drawing.Point(2, 188);
@@ -17173,7 +17174,7 @@
             this.label108.Location = new System.Drawing.Point(50, 1);
             this.label108.Name = "label108";
             this.label108.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label108.Size = new System.Drawing.Size(342, 42);
+            this.label108.Size = new System.Drawing.Size(343, 42);
             this.label108.TabIndex = 8;
             this.label108.Text = "Y54 : 蓋子震動盤";
             this.label108.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17183,7 +17184,7 @@
             this.tableLayoutPanel109.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel109.ColumnCount = 2;
             this.tableLayoutPanel109.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel109.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel109.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel109.Controls.Add(this.plC_Button109, 0, 0);
             this.tableLayoutPanel109.Controls.Add(this.label109, 1, 0);
             this.tableLayoutPanel109.Location = new System.Drawing.Point(2, 142);
@@ -17237,7 +17238,7 @@
             this.label109.Location = new System.Drawing.Point(50, 1);
             this.label109.Name = "label109";
             this.label109.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label109.Size = new System.Drawing.Size(342, 42);
+            this.label109.Size = new System.Drawing.Size(343, 42);
             this.label109.TabIndex = 8;
             this.label109.Text = "Y53 : 小直震動盤";
             this.label109.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17247,7 +17248,7 @@
             this.tableLayoutPanel110.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel110.ColumnCount = 2;
             this.tableLayoutPanel110.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel110.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel110.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel110.Controls.Add(this.plC_Button110, 0, 0);
             this.tableLayoutPanel110.Controls.Add(this.label110, 1, 0);
             this.tableLayoutPanel110.Location = new System.Drawing.Point(2, 96);
@@ -17301,7 +17302,7 @@
             this.label110.Location = new System.Drawing.Point(50, 1);
             this.label110.Name = "label110";
             this.label110.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label110.Size = new System.Drawing.Size(342, 42);
+            this.label110.Size = new System.Drawing.Size(343, 42);
             this.label110.TabIndex = 8;
             this.label110.Text = "Y52 : 小圓震動盤";
             this.label110.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17311,7 +17312,7 @@
             this.tableLayoutPanel111.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel111.ColumnCount = 2;
             this.tableLayoutPanel111.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel111.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel111.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel111.Controls.Add(this.plC_Button111, 0, 0);
             this.tableLayoutPanel111.Controls.Add(this.label111, 1, 0);
             this.tableLayoutPanel111.Location = new System.Drawing.Point(2, 49);
@@ -17365,7 +17366,7 @@
             this.label111.Location = new System.Drawing.Point(50, 1);
             this.label111.Name = "label111";
             this.label111.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label111.Size = new System.Drawing.Size(342, 42);
+            this.label111.Size = new System.Drawing.Size(343, 42);
             this.label111.TabIndex = 8;
             this.label111.Text = "Y51 : 備用";
             this.label111.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17375,7 +17376,7 @@
             this.tableLayoutPanel112.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel112.ColumnCount = 2;
             this.tableLayoutPanel112.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel112.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel112.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel112.Controls.Add(this.plC_Button112, 0, 0);
             this.tableLayoutPanel112.Controls.Add(this.label112, 1, 0);
             this.tableLayoutPanel112.Location = new System.Drawing.Point(2, 3);
@@ -17429,7 +17430,7 @@
             this.label112.Location = new System.Drawing.Point(50, 1);
             this.label112.Name = "label112";
             this.label112.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label112.Size = new System.Drawing.Size(342, 42);
+            this.label112.Size = new System.Drawing.Size(343, 42);
             this.label112.TabIndex = 8;
             this.label112.Text = "Y50 : 備用";
             this.label112.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17455,7 +17456,7 @@
             this.tableLayoutPanel113.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel113.ColumnCount = 2;
             this.tableLayoutPanel113.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel113.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel113.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel113.Controls.Add(this.plC_Button113, 0, 0);
             this.tableLayoutPanel113.Controls.Add(this.label113, 1, 0);
             this.tableLayoutPanel113.Location = new System.Drawing.Point(2, 326);
@@ -17509,7 +17510,7 @@
             this.label113.Location = new System.Drawing.Point(50, 1);
             this.label113.Name = "label113";
             this.label113.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label113.Size = new System.Drawing.Size(342, 42);
+            this.label113.Size = new System.Drawing.Size(343, 42);
             this.label113.TabIndex = 8;
             this.label113.Text = "Y67 : 備用";
             this.label113.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17519,7 +17520,7 @@
             this.tableLayoutPanel114.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel114.ColumnCount = 2;
             this.tableLayoutPanel114.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel114.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel114.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel114.Controls.Add(this.plC_Button114, 0, 0);
             this.tableLayoutPanel114.Controls.Add(this.label114, 1, 0);
             this.tableLayoutPanel114.Location = new System.Drawing.Point(2, 280);
@@ -17573,7 +17574,7 @@
             this.label114.Location = new System.Drawing.Point(50, 1);
             this.label114.Name = "label114";
             this.label114.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label114.Size = new System.Drawing.Size(342, 42);
+            this.label114.Size = new System.Drawing.Size(343, 42);
             this.label114.TabIndex = 8;
             this.label114.Text = "Y66 : 備用";
             this.label114.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17583,7 +17584,7 @@
             this.tableLayoutPanel115.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel115.ColumnCount = 2;
             this.tableLayoutPanel115.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel115.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel115.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel115.Controls.Add(this.plC_Button115, 0, 0);
             this.tableLayoutPanel115.Controls.Add(this.label115, 1, 0);
             this.tableLayoutPanel115.Location = new System.Drawing.Point(2, 234);
@@ -17637,7 +17638,7 @@
             this.label115.Location = new System.Drawing.Point(50, 1);
             this.label115.Name = "label115";
             this.label115.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label115.Size = new System.Drawing.Size(342, 42);
+            this.label115.Size = new System.Drawing.Size(343, 42);
             this.label115.TabIndex = 8;
             this.label115.Text = "Y65 : 備用";
             this.label115.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17647,7 +17648,7 @@
             this.tableLayoutPanel116.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel116.ColumnCount = 2;
             this.tableLayoutPanel116.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel116.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel116.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel116.Controls.Add(this.plC_Button116, 0, 0);
             this.tableLayoutPanel116.Controls.Add(this.label116, 1, 0);
             this.tableLayoutPanel116.Location = new System.Drawing.Point(2, 188);
@@ -17701,7 +17702,7 @@
             this.label116.Location = new System.Drawing.Point(50, 1);
             this.label116.Name = "label116";
             this.label116.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label116.Size = new System.Drawing.Size(342, 42);
+            this.label116.Size = new System.Drawing.Size(343, 42);
             this.label116.TabIndex = 8;
             this.label116.Text = "Y64 : 備用";
             this.label116.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17711,7 +17712,7 @@
             this.tableLayoutPanel117.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel117.ColumnCount = 2;
             this.tableLayoutPanel117.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel117.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel117.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel117.Controls.Add(this.plC_Button117, 0, 0);
             this.tableLayoutPanel117.Controls.Add(this.label117, 1, 0);
             this.tableLayoutPanel117.Location = new System.Drawing.Point(2, 142);
@@ -17765,7 +17766,7 @@
             this.label117.Location = new System.Drawing.Point(50, 1);
             this.label117.Name = "label117";
             this.label117.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label117.Size = new System.Drawing.Size(342, 42);
+            this.label117.Size = new System.Drawing.Size(343, 42);
             this.label117.TabIndex = 8;
             this.label117.Text = "Y63 : 備用";
             this.label117.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17775,7 +17776,7 @@
             this.tableLayoutPanel118.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel118.ColumnCount = 2;
             this.tableLayoutPanel118.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel118.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel118.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel118.Controls.Add(this.plC_Button118, 0, 0);
             this.tableLayoutPanel118.Controls.Add(this.label118, 1, 0);
             this.tableLayoutPanel118.Location = new System.Drawing.Point(2, 96);
@@ -17829,7 +17830,7 @@
             this.label118.Location = new System.Drawing.Point(50, 1);
             this.label118.Name = "label118";
             this.label118.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label118.Size = new System.Drawing.Size(342, 42);
+            this.label118.Size = new System.Drawing.Size(343, 42);
             this.label118.TabIndex = 8;
             this.label118.Text = "Y62 : 備用";
             this.label118.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17839,7 +17840,7 @@
             this.tableLayoutPanel119.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel119.ColumnCount = 2;
             this.tableLayoutPanel119.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel119.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel119.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel119.Controls.Add(this.plC_Button119, 0, 0);
             this.tableLayoutPanel119.Controls.Add(this.label119, 1, 0);
             this.tableLayoutPanel119.Location = new System.Drawing.Point(2, 49);
@@ -17893,7 +17894,7 @@
             this.label119.Location = new System.Drawing.Point(50, 1);
             this.label119.Name = "label119";
             this.label119.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label119.Size = new System.Drawing.Size(342, 42);
+            this.label119.Size = new System.Drawing.Size(343, 42);
             this.label119.TabIndex = 8;
             this.label119.Text = "Y61 : 備用";
             this.label119.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17903,7 +17904,7 @@
             this.tableLayoutPanel120.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel120.ColumnCount = 2;
             this.tableLayoutPanel120.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel120.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel120.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel120.Controls.Add(this.plC_Button120, 0, 0);
             this.tableLayoutPanel120.Controls.Add(this.label120, 1, 0);
             this.tableLayoutPanel120.Location = new System.Drawing.Point(2, 3);
@@ -17957,7 +17958,7 @@
             this.label120.Location = new System.Drawing.Point(50, 1);
             this.label120.Name = "label120";
             this.label120.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label120.Size = new System.Drawing.Size(342, 42);
+            this.label120.Size = new System.Drawing.Size(343, 42);
             this.label120.TabIndex = 8;
             this.label120.Text = "Y60 : 備用";
             this.label120.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -17983,7 +17984,7 @@
             this.tableLayoutPanel121.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel121.ColumnCount = 2;
             this.tableLayoutPanel121.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel121.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel121.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel121.Controls.Add(this.plC_Button121, 0, 0);
             this.tableLayoutPanel121.Controls.Add(this.label121, 1, 0);
             this.tableLayoutPanel121.Location = new System.Drawing.Point(2, 326);
@@ -18037,7 +18038,7 @@
             this.label121.Location = new System.Drawing.Point(50, 1);
             this.label121.Name = "label121";
             this.label121.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label121.Size = new System.Drawing.Size(342, 42);
+            this.label121.Size = new System.Drawing.Size(343, 42);
             this.label121.TabIndex = 8;
             this.label121.Text = "Y47 : 成品組蓋吸真空2";
             this.label121.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18047,7 +18048,7 @@
             this.tableLayoutPanel122.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel122.ColumnCount = 2;
             this.tableLayoutPanel122.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel122.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel122.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel122.Controls.Add(this.plC_Button122, 0, 0);
             this.tableLayoutPanel122.Controls.Add(this.label122, 1, 0);
             this.tableLayoutPanel122.Location = new System.Drawing.Point(2, 280);
@@ -18101,7 +18102,7 @@
             this.label122.Location = new System.Drawing.Point(50, 1);
             this.label122.Name = "label122";
             this.label122.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label122.Size = new System.Drawing.Size(342, 42);
+            this.label122.Size = new System.Drawing.Size(343, 42);
             this.label122.TabIndex = 8;
             this.label122.Text = "Y46 : 成品組蓋吸真空1";
             this.label122.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18111,7 +18112,7 @@
             this.tableLayoutPanel123.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel123.ColumnCount = 2;
             this.tableLayoutPanel123.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel123.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel123.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel123.Controls.Add(this.plC_Button123, 0, 0);
             this.tableLayoutPanel123.Controls.Add(this.label123, 1, 0);
             this.tableLayoutPanel123.Location = new System.Drawing.Point(2, 234);
@@ -18165,7 +18166,7 @@
             this.label123.Location = new System.Drawing.Point(50, 1);
             this.label123.Name = "label123";
             this.label123.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label123.Size = new System.Drawing.Size(342, 42);
+            this.label123.Size = new System.Drawing.Size(343, 42);
             this.label123.TabIndex = 8;
             this.label123.Text = "Y45 : 三色燈-蜂鳴";
             this.label123.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18175,7 +18176,7 @@
             this.tableLayoutPanel124.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel124.ColumnCount = 2;
             this.tableLayoutPanel124.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel124.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel124.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel124.Controls.Add(this.plC_Button124, 0, 0);
             this.tableLayoutPanel124.Controls.Add(this.label124, 1, 0);
             this.tableLayoutPanel124.Location = new System.Drawing.Point(2, 188);
@@ -18229,7 +18230,7 @@
             this.label124.Location = new System.Drawing.Point(50, 1);
             this.label124.Name = "label124";
             this.label124.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label124.Size = new System.Drawing.Size(342, 42);
+            this.label124.Size = new System.Drawing.Size(343, 42);
             this.label124.TabIndex = 8;
             this.label124.Text = "Y44 : 三色燈-綠";
             this.label124.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18239,7 +18240,7 @@
             this.tableLayoutPanel125.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel125.ColumnCount = 2;
             this.tableLayoutPanel125.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel125.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel125.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel125.Controls.Add(this.plC_Button125, 0, 0);
             this.tableLayoutPanel125.Controls.Add(this.label125, 1, 0);
             this.tableLayoutPanel125.Location = new System.Drawing.Point(2, 142);
@@ -18293,7 +18294,7 @@
             this.label125.Location = new System.Drawing.Point(50, 1);
             this.label125.Name = "label125";
             this.label125.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label125.Size = new System.Drawing.Size(342, 42);
+            this.label125.Size = new System.Drawing.Size(343, 42);
             this.label125.TabIndex = 8;
             this.label125.Text = "Y43 : 三色燈-橙";
             this.label125.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18303,7 +18304,7 @@
             this.tableLayoutPanel126.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel126.ColumnCount = 2;
             this.tableLayoutPanel126.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel126.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel126.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel126.Controls.Add(this.plC_Button126, 0, 0);
             this.tableLayoutPanel126.Controls.Add(this.label126, 1, 0);
             this.tableLayoutPanel126.Location = new System.Drawing.Point(2, 96);
@@ -18357,7 +18358,7 @@
             this.label126.Location = new System.Drawing.Point(50, 1);
             this.label126.Name = "label126";
             this.label126.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label126.Size = new System.Drawing.Size(342, 42);
+            this.label126.Size = new System.Drawing.Size(343, 42);
             this.label126.TabIndex = 8;
             this.label126.Text = "Y42 : 三色燈-紅";
             this.label126.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18367,7 +18368,7 @@
             this.tableLayoutPanel127.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel127.ColumnCount = 2;
             this.tableLayoutPanel127.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel127.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel127.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel127.Controls.Add(this.plC_Button127, 0, 0);
             this.tableLayoutPanel127.Controls.Add(this.label127, 1, 0);
             this.tableLayoutPanel127.Location = new System.Drawing.Point(2, 49);
@@ -18421,7 +18422,7 @@
             this.label127.Location = new System.Drawing.Point(50, 1);
             this.label127.Name = "label127";
             this.label127.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label127.Size = new System.Drawing.Size(342, 42);
+            this.label127.Size = new System.Drawing.Size(343, 42);
             this.label127.TabIndex = 8;
             this.label127.Text = "Y41 : O環取料";
             this.label127.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18431,7 +18432,7 @@
             this.tableLayoutPanel128.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel128.ColumnCount = 2;
             this.tableLayoutPanel128.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel128.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel128.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel128.Controls.Add(this.plC_Button128, 0, 0);
             this.tableLayoutPanel128.Controls.Add(this.label128, 1, 0);
             this.tableLayoutPanel128.Location = new System.Drawing.Point(2, 3);
@@ -18485,7 +18486,7 @@
             this.label128.Location = new System.Drawing.Point(50, 1);
             this.label128.Name = "label128";
             this.label128.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label128.Size = new System.Drawing.Size(342, 42);
+            this.label128.Size = new System.Drawing.Size(343, 42);
             this.label128.TabIndex = 8;
             this.label128.Text = "Y40 : 入料套管定位";
             this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18578,7 +18579,7 @@
             this.tableLayoutPanel25.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel25.ColumnCount = 2;
             this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel25.Controls.Add(this.plC_Button25, 0, 0);
             this.tableLayoutPanel25.Controls.Add(this.label25, 1, 0);
             this.tableLayoutPanel25.Location = new System.Drawing.Point(2, 326);
@@ -18634,7 +18635,7 @@
             this.label25.Location = new System.Drawing.Point(50, 1);
             this.label25.Name = "label25";
             this.label25.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label25.Size = new System.Drawing.Size(342, 42);
+            this.label25.Size = new System.Drawing.Size(343, 42);
             this.label25.TabIndex = 8;
             this.label25.Text = "X37 : 10式匝間檢測上下1終點";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18644,7 +18645,7 @@
             this.tableLayoutPanel26.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel26.ColumnCount = 2;
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel26.Controls.Add(this.plC_Button26, 0, 0);
             this.tableLayoutPanel26.Controls.Add(this.label26, 1, 0);
             this.tableLayoutPanel26.Location = new System.Drawing.Point(2, 280);
@@ -18700,7 +18701,7 @@
             this.label26.Location = new System.Drawing.Point(50, 1);
             this.label26.Name = "label26";
             this.label26.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label26.Size = new System.Drawing.Size(342, 42);
+            this.label26.Size = new System.Drawing.Size(343, 42);
             this.label26.TabIndex = 8;
             this.label26.Text = "X36 : 10式匝間檢測上下1原點";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18710,7 +18711,7 @@
             this.tableLayoutPanel27.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel27.ColumnCount = 2;
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel27.Controls.Add(this.plC_Button27, 0, 0);
             this.tableLayoutPanel27.Controls.Add(this.label27, 1, 0);
             this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 234);
@@ -18766,7 +18767,7 @@
             this.label27.Location = new System.Drawing.Point(50, 1);
             this.label27.Name = "label27";
             this.label27.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label27.Size = new System.Drawing.Size(342, 42);
+            this.label27.Size = new System.Drawing.Size(343, 42);
             this.label27.TabIndex = 8;
             this.label27.Text = "X35 : 10式匝間檢測上下2終點";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18776,7 +18777,7 @@
             this.tableLayoutPanel28.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel28.ColumnCount = 2;
             this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel28.Controls.Add(this.plC_Button28, 0, 0);
             this.tableLayoutPanel28.Controls.Add(this.label28, 1, 0);
             this.tableLayoutPanel28.Location = new System.Drawing.Point(2, 188);
@@ -18832,7 +18833,7 @@
             this.label28.Location = new System.Drawing.Point(50, 1);
             this.label28.Name = "label28";
             this.label28.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label28.Size = new System.Drawing.Size(342, 42);
+            this.label28.Size = new System.Drawing.Size(343, 42);
             this.label28.TabIndex = 8;
             this.label28.Text = "X34 : 10式匝間檢測上下2原點";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18842,7 +18843,7 @@
             this.tableLayoutPanel29.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel29.ColumnCount = 2;
             this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel29.Controls.Add(this.plC_Button29, 0, 0);
             this.tableLayoutPanel29.Controls.Add(this.label29, 1, 0);
             this.tableLayoutPanel29.Location = new System.Drawing.Point(2, 142);
@@ -18898,7 +18899,7 @@
             this.label29.Location = new System.Drawing.Point(50, 1);
             this.label29.Name = "label29";
             this.label29.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label29.Size = new System.Drawing.Size(342, 42);
+            this.label29.Size = new System.Drawing.Size(343, 42);
             this.label29.TabIndex = 8;
             this.label29.Text = "X33 : 20式匝間探針夾爪終點";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18908,7 +18909,7 @@
             this.tableLayoutPanel30.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel30.ColumnCount = 2;
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel30.Controls.Add(this.plC_Button30, 0, 0);
             this.tableLayoutPanel30.Controls.Add(this.label30, 1, 0);
             this.tableLayoutPanel30.Location = new System.Drawing.Point(2, 96);
@@ -18964,7 +18965,7 @@
             this.label30.Location = new System.Drawing.Point(50, 1);
             this.label30.Name = "label30";
             this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label30.Size = new System.Drawing.Size(342, 42);
+            this.label30.Size = new System.Drawing.Size(343, 42);
             this.label30.TabIndex = 8;
             this.label30.Text = "X32 : 20式匝間探針夾爪原點";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -18974,7 +18975,7 @@
             this.tableLayoutPanel31.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel31.ColumnCount = 2;
             this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel31.Controls.Add(this.plC_Button31, 0, 0);
             this.tableLayoutPanel31.Controls.Add(this.label31, 1, 0);
             this.tableLayoutPanel31.Location = new System.Drawing.Point(2, 49);
@@ -19030,7 +19031,7 @@
             this.label31.Location = new System.Drawing.Point(50, 1);
             this.label31.Name = "label31";
             this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label31.Size = new System.Drawing.Size(342, 42);
+            this.label31.Size = new System.Drawing.Size(343, 42);
             this.label31.TabIndex = 8;
             this.label31.Text = "X31 : 20式匝間探針前進終點";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19040,7 +19041,7 @@
             this.tableLayoutPanel32.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel32.ColumnCount = 2;
             this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel32.Controls.Add(this.plC_Button32, 0, 0);
             this.tableLayoutPanel32.Controls.Add(this.label32, 1, 0);
             this.tableLayoutPanel32.Location = new System.Drawing.Point(2, 3);
@@ -19096,7 +19097,7 @@
             this.label32.Location = new System.Drawing.Point(50, 1);
             this.label32.Name = "label32";
             this.label32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label32.Size = new System.Drawing.Size(342, 42);
+            this.label32.Size = new System.Drawing.Size(343, 42);
             this.label32.TabIndex = 8;
             this.label32.Text = "X30 : 20式匝間探針前進原點";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19122,7 +19123,7 @@
             this.tableLayoutPanel17.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel17.ColumnCount = 2;
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel17.Controls.Add(this.plC_Button17, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 326);
@@ -19178,7 +19179,7 @@
             this.label17.Location = new System.Drawing.Point(50, 1);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label17.Size = new System.Drawing.Size(342, 42);
+            this.label17.Size = new System.Drawing.Size(343, 42);
             this.label17.TabIndex = 8;
             this.label17.Text = "X17 : 20式耐壓/絕緣探針進退終點";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19188,7 +19189,7 @@
             this.tableLayoutPanel18.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel18.ColumnCount = 2;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel18.Controls.Add(this.plC_Button18, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.label18, 1, 0);
             this.tableLayoutPanel18.Location = new System.Drawing.Point(2, 280);
@@ -19244,7 +19245,7 @@
             this.label18.Location = new System.Drawing.Point(50, 1);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label18.Size = new System.Drawing.Size(342, 42);
+            this.label18.Size = new System.Drawing.Size(343, 42);
             this.label18.TabIndex = 8;
             this.label18.Text = "X16 : 20式耐壓/絕緣探針進退原點";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19254,7 +19255,7 @@
             this.tableLayoutPanel19.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel19.ColumnCount = 2;
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel19.Controls.Add(this.plC_Button19, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.label19, 1, 0);
             this.tableLayoutPanel19.Location = new System.Drawing.Point(2, 234);
@@ -19310,7 +19311,7 @@
             this.label19.Location = new System.Drawing.Point(50, 1);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(342, 42);
+            this.label19.Size = new System.Drawing.Size(343, 42);
             this.label19.TabIndex = 8;
             this.label19.Text = "X15 : 10式電功率磁管上下終點";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19320,7 +19321,7 @@
             this.tableLayoutPanel20.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel20.ColumnCount = 2;
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel20.Controls.Add(this.plC_Button20, 0, 0);
             this.tableLayoutPanel20.Controls.Add(this.label20, 1, 0);
             this.tableLayoutPanel20.Location = new System.Drawing.Point(2, 188);
@@ -19376,7 +19377,7 @@
             this.label20.Location = new System.Drawing.Point(50, 1);
             this.label20.Name = "label20";
             this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label20.Size = new System.Drawing.Size(342, 42);
+            this.label20.Size = new System.Drawing.Size(343, 42);
             this.label20.TabIndex = 8;
             this.label20.Text = "X14 : 10式電功率磁管上下原點";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19386,7 +19387,7 @@
             this.tableLayoutPanel21.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel21.ColumnCount = 2;
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel21.Controls.Add(this.plC_Button21, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel21.Location = new System.Drawing.Point(2, 142);
@@ -19442,7 +19443,7 @@
             this.label21.Location = new System.Drawing.Point(50, 1);
             this.label21.Name = "label21";
             this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label21.Size = new System.Drawing.Size(342, 42);
+            this.label21.Size = new System.Drawing.Size(343, 42);
             this.label21.TabIndex = 8;
             this.label21.Text = "X13 : 10式電功率探針上下終點";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19452,7 +19453,7 @@
             this.tableLayoutPanel22.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel22.ColumnCount = 2;
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel22.Controls.Add(this.plC_Button22, 0, 0);
             this.tableLayoutPanel22.Controls.Add(this.label22, 1, 0);
             this.tableLayoutPanel22.Location = new System.Drawing.Point(2, 96);
@@ -19508,7 +19509,7 @@
             this.label22.Location = new System.Drawing.Point(50, 1);
             this.label22.Name = "label22";
             this.label22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label22.Size = new System.Drawing.Size(342, 42);
+            this.label22.Size = new System.Drawing.Size(343, 42);
             this.label22.TabIndex = 8;
             this.label22.Text = "X12 : 10式電功率探針上下原點";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19518,7 +19519,7 @@
             this.tableLayoutPanel23.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel23.ColumnCount = 2;
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel23.Controls.Add(this.plC_Button23, 0, 0);
             this.tableLayoutPanel23.Controls.Add(this.label23, 1, 0);
             this.tableLayoutPanel23.Location = new System.Drawing.Point(2, 49);
@@ -19574,7 +19575,7 @@
             this.label23.Location = new System.Drawing.Point(50, 1);
             this.label23.Name = "label23";
             this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label23.Size = new System.Drawing.Size(342, 42);
+            this.label23.Size = new System.Drawing.Size(343, 42);
             this.label23.TabIndex = 8;
             this.label23.Text = "X11 : 20式電功率探針夾爪終點";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19584,7 +19585,7 @@
             this.tableLayoutPanel24.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel24.ColumnCount = 2;
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel24.Controls.Add(this.plC_Button24, 0, 0);
             this.tableLayoutPanel24.Controls.Add(this.label24, 1, 0);
             this.tableLayoutPanel24.Location = new System.Drawing.Point(2, 3);
@@ -19640,7 +19641,7 @@
             this.label24.Location = new System.Drawing.Point(50, 1);
             this.label24.Name = "label24";
             this.label24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label24.Size = new System.Drawing.Size(342, 42);
+            this.label24.Size = new System.Drawing.Size(343, 42);
             this.label24.TabIndex = 8;
             this.label24.Text = "X10 : 20式電功率探針夾爪原點";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19666,7 +19667,7 @@
             this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel9.Controls.Add(this.plC_Button9, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.label9, 1, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 326);
@@ -19722,7 +19723,7 @@
             this.label9.Location = new System.Drawing.Point(50, 1);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(342, 42);
+            this.label9.Size = new System.Drawing.Size(343, 42);
             this.label9.TabIndex = 8;
             this.label9.Text = "X27 : 10式耐壓/絕緣銅刷上下終點";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19732,7 +19733,7 @@
             this.tableLayoutPanel10.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel10.ColumnCount = 2;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel10.Controls.Add(this.plC_Button10, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label10, 1, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 280);
@@ -19788,7 +19789,7 @@
             this.label10.Location = new System.Drawing.Point(50, 1);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(342, 42);
+            this.label10.Size = new System.Drawing.Size(343, 42);
             this.label10.TabIndex = 8;
             this.label10.Text = "X26 : 10式耐壓/絕緣銅刷上下原點";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19798,7 +19799,7 @@
             this.tableLayoutPanel11.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel11.ColumnCount = 2;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel11.Controls.Add(this.plC_Button11, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.label11, 1, 0);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(2, 234);
@@ -19854,7 +19855,7 @@
             this.label11.Location = new System.Drawing.Point(50, 1);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(342, 42);
+            this.label11.Size = new System.Drawing.Size(343, 42);
             this.label11.TabIndex = 8;
             this.label11.Text = "X25 : 10式耐壓/絕緣探針上下終點";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19864,7 +19865,7 @@
             this.tableLayoutPanel12.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel12.Controls.Add(this.plC_Button12, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.label12, 1, 0);
             this.tableLayoutPanel12.Location = new System.Drawing.Point(2, 188);
@@ -19920,7 +19921,7 @@
             this.label12.Location = new System.Drawing.Point(50, 1);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(342, 42);
+            this.label12.Size = new System.Drawing.Size(343, 42);
             this.label12.TabIndex = 8;
             this.label12.Text = "X24 : 10式耐壓/絕緣探針上下原點";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19930,7 +19931,7 @@
             this.tableLayoutPanel13.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel13.ColumnCount = 2;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel13.Controls.Add(this.plC_Button13, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.label13, 1, 0);
             this.tableLayoutPanel13.Location = new System.Drawing.Point(2, 142);
@@ -19986,7 +19987,7 @@
             this.label13.Location = new System.Drawing.Point(50, 1);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(342, 42);
+            this.label13.Size = new System.Drawing.Size(343, 42);
             this.label13.TabIndex = 8;
             this.label13.Text = "X23 : 20式耐壓/絕緣測地上下終點";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -19996,7 +19997,7 @@
             this.tableLayoutPanel14.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel14.ColumnCount = 2;
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel14.Controls.Add(this.plC_Button14, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.label14, 1, 0);
             this.tableLayoutPanel14.Location = new System.Drawing.Point(2, 96);
@@ -20052,7 +20053,7 @@
             this.label14.Location = new System.Drawing.Point(50, 1);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label14.Size = new System.Drawing.Size(342, 42);
+            this.label14.Size = new System.Drawing.Size(343, 42);
             this.label14.TabIndex = 8;
             this.label14.Text = "X22 : 20式耐壓/絕緣測地上下原點";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20062,7 +20063,7 @@
             this.tableLayoutPanel15.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel15.ColumnCount = 2;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel15.Controls.Add(this.plC_Button15, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.label15, 1, 0);
             this.tableLayoutPanel15.Location = new System.Drawing.Point(2, 49);
@@ -20118,7 +20119,7 @@
             this.label15.Location = new System.Drawing.Point(50, 1);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label15.Size = new System.Drawing.Size(342, 42);
+            this.label15.Size = new System.Drawing.Size(343, 42);
             this.label15.TabIndex = 8;
             this.label15.Text = "X21 : 20式耐壓/絕緣探針夾爪終點";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20128,7 +20129,7 @@
             this.tableLayoutPanel16.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel16.ColumnCount = 2;
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel16.Controls.Add(this.plC_Button16, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.label16, 1, 0);
             this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 3);
@@ -20184,7 +20185,7 @@
             this.label16.Location = new System.Drawing.Point(50, 1);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label16.Size = new System.Drawing.Size(342, 42);
+            this.label16.Size = new System.Drawing.Size(343, 42);
             this.label16.TabIndex = 8;
             this.label16.Text = "X20 : 20式耐壓/絕緣探針夾爪原點";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20210,7 +20211,7 @@
             this.tableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel7.Controls.Add(this.plC_Button7, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 326);
@@ -20266,7 +20267,7 @@
             this.label7.Location = new System.Drawing.Point(50, 1);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(342, 42);
+            this.label7.Size = new System.Drawing.Size(343, 42);
             this.label7.TabIndex = 8;
             this.label7.Text = "X07 : 20式電功率探針前進終點";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20276,7 +20277,7 @@
             this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel8.Controls.Add(this.plC_Button8, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label8, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 280);
@@ -20332,7 +20333,7 @@
             this.label8.Location = new System.Drawing.Point(50, 1);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(342, 42);
+            this.label8.Size = new System.Drawing.Size(343, 42);
             this.label8.TabIndex = 8;
             this.label8.Text = "X06 : 20式電功率探針前進原點";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20342,7 +20343,7 @@
             this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel4.Controls.Add(this.plC_Button4, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 234);
@@ -20398,7 +20399,7 @@
             this.label4.Location = new System.Drawing.Point(50, 1);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(342, 42);
+            this.label4.Size = new System.Drawing.Size(343, 42);
             this.label4.TabIndex = 8;
             this.label4.Text = "X05 : 入料套管定位終點";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20408,7 +20409,7 @@
             this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel5.Controls.Add(this.plC_Button5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 188);
@@ -20464,7 +20465,7 @@
             this.label5.Location = new System.Drawing.Point(50, 1);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(342, 42);
+            this.label5.Size = new System.Drawing.Size(343, 42);
             this.label5.TabIndex = 8;
             this.label5.Text = "X04 : 入料套管定位原點";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20474,7 +20475,7 @@
             this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel6.Controls.Add(this.plC_Button6, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 142);
@@ -20530,7 +20531,7 @@
             this.label6.Location = new System.Drawing.Point(50, 1);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(342, 42);
+            this.label6.Size = new System.Drawing.Size(343, 42);
             this.label6.TabIndex = 8;
             this.label6.Text = "X03 : 入料導正夾爪終點";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20540,7 +20541,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel3.Controls.Add(this.plC_Button3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 96);
@@ -20596,7 +20597,7 @@
             this.label3.Location = new System.Drawing.Point(50, 1);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(342, 42);
+            this.label3.Size = new System.Drawing.Size(343, 42);
             this.label3.TabIndex = 8;
             this.label3.Text = "X02 : 入料導正夾爪原點";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20606,7 +20607,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel2.Controls.Add(this.plC_Button2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 49);
@@ -20662,7 +20663,7 @@
             this.label2.Location = new System.Drawing.Point(50, 1);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(342, 42);
+            this.label2.Size = new System.Drawing.Size(343, 42);
             this.label2.TabIndex = 8;
             this.label2.Text = "X01 : 入料導正前進終點";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20672,7 +20673,7 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel1.Controls.Add(this.plC_Button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 3);
@@ -20727,7 +20728,7 @@
             this.label1.Location = new System.Drawing.Point(50, 1);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(342, 42);
+            this.label1.Size = new System.Drawing.Size(343, 42);
             this.label1.TabIndex = 8;
             this.label1.Text = "X00 : 入料導正前進原點";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20767,7 +20768,7 @@
             this.tableLayoutPanel33.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel33.ColumnCount = 2;
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel33.Controls.Add(this.plC_Button33, 0, 0);
             this.tableLayoutPanel33.Controls.Add(this.label33, 1, 0);
             this.tableLayoutPanel33.Location = new System.Drawing.Point(2, 326);
@@ -20823,7 +20824,7 @@
             this.label33.Location = new System.Drawing.Point(50, 1);
             this.label33.Name = "label33";
             this.label33.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label33.Size = new System.Drawing.Size(342, 42);
+            this.label33.Size = new System.Drawing.Size(343, 42);
             this.label33.TabIndex = 8;
             this.label33.Text = "X77 : 備用";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20833,7 +20834,7 @@
             this.tableLayoutPanel34.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel34.ColumnCount = 2;
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel34.Controls.Add(this.plC_Button34, 0, 0);
             this.tableLayoutPanel34.Controls.Add(this.label34, 1, 0);
             this.tableLayoutPanel34.Location = new System.Drawing.Point(2, 280);
@@ -20889,7 +20890,7 @@
             this.label34.Location = new System.Drawing.Point(50, 1);
             this.label34.Name = "label34";
             this.label34.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label34.Size = new System.Drawing.Size(342, 42);
+            this.label34.Size = new System.Drawing.Size(343, 42);
             this.label34.TabIndex = 8;
             this.label34.Text = "X76 : 圓盤原點";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20899,7 +20900,7 @@
             this.tableLayoutPanel35.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel35.ColumnCount = 2;
             this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel35.Controls.Add(this.plC_Button35, 0, 0);
             this.tableLayoutPanel35.Controls.Add(this.label35, 1, 0);
             this.tableLayoutPanel35.Location = new System.Drawing.Point(2, 234);
@@ -20955,7 +20956,7 @@
             this.label35.Location = new System.Drawing.Point(50, 1);
             this.label35.Name = "label35";
             this.label35.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label35.Size = new System.Drawing.Size(342, 42);
+            this.label35.Size = new System.Drawing.Size(343, 42);
             this.label35.TabIndex = 8;
             this.label35.Text = "X75 : 蓋子到料近接";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -20965,7 +20966,7 @@
             this.tableLayoutPanel36.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel36.ColumnCount = 2;
             this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel36.Controls.Add(this.plC_Button36, 0, 0);
             this.tableLayoutPanel36.Controls.Add(this.label36, 1, 0);
             this.tableLayoutPanel36.Location = new System.Drawing.Point(2, 188);
@@ -21021,7 +21022,7 @@
             this.label36.Location = new System.Drawing.Point(50, 1);
             this.label36.Name = "label36";
             this.label36.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label36.Size = new System.Drawing.Size(342, 42);
+            this.label36.Size = new System.Drawing.Size(343, 42);
             this.label36.TabIndex = 8;
             this.label36.Text = "X74 : 蓋子滿料近接";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21031,7 +21032,7 @@
             this.tableLayoutPanel37.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel37.ColumnCount = 2;
             this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel37.Controls.Add(this.plC_Button37, 0, 0);
             this.tableLayoutPanel37.Controls.Add(this.label37, 1, 0);
             this.tableLayoutPanel37.Location = new System.Drawing.Point(2, 142);
@@ -21087,7 +21088,7 @@
             this.label37.Location = new System.Drawing.Point(50, 1);
             this.label37.Name = "label37";
             this.label37.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label37.Size = new System.Drawing.Size(342, 42);
+            this.label37.Size = new System.Drawing.Size(343, 42);
             this.label37.TabIndex = 8;
             this.label37.Text = "X73 : 入料夾持鬆開終點";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21097,7 +21098,7 @@
             this.tableLayoutPanel38.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel38.ColumnCount = 2;
             this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel38.Controls.Add(this.plC_Button38, 0, 0);
             this.tableLayoutPanel38.Controls.Add(this.label38, 1, 0);
             this.tableLayoutPanel38.Location = new System.Drawing.Point(2, 96);
@@ -21153,7 +21154,7 @@
             this.label38.Location = new System.Drawing.Point(50, 1);
             this.label38.Name = "label38";
             this.label38.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label38.Size = new System.Drawing.Size(342, 42);
+            this.label38.Size = new System.Drawing.Size(343, 42);
             this.label38.TabIndex = 8;
             this.label38.Text = "X72 : 入料夾持鬆開原點";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21163,7 +21164,7 @@
             this.tableLayoutPanel39.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel39.ColumnCount = 2;
             this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel39.Controls.Add(this.plC_Button39, 0, 0);
             this.tableLayoutPanel39.Controls.Add(this.label39, 1, 0);
             this.tableLayoutPanel39.Location = new System.Drawing.Point(2, 49);
@@ -21219,7 +21220,7 @@
             this.label39.Location = new System.Drawing.Point(50, 1);
             this.label39.Name = "label39";
             this.label39.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label39.Size = new System.Drawing.Size(342, 42);
+            this.label39.Size = new System.Drawing.Size(343, 42);
             this.label39.TabIndex = 8;
             this.label39.Text = "X71 : O環組裝進退終點";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21229,7 +21230,7 @@
             this.tableLayoutPanel40.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel40.ColumnCount = 2;
             this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel40.Controls.Add(this.plC_Button40, 0, 0);
             this.tableLayoutPanel40.Controls.Add(this.label40, 1, 0);
             this.tableLayoutPanel40.Location = new System.Drawing.Point(2, 3);
@@ -21285,7 +21286,7 @@
             this.label40.Location = new System.Drawing.Point(50, 1);
             this.label40.Name = "label40";
             this.label40.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label40.Size = new System.Drawing.Size(342, 42);
+            this.label40.Size = new System.Drawing.Size(343, 42);
             this.label40.TabIndex = 8;
             this.label40.Text = "X70 : O環組裝進退原點";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21311,7 +21312,7 @@
             this.tableLayoutPanel41.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel41.ColumnCount = 2;
             this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel41.Controls.Add(this.plC_Button41, 0, 0);
             this.tableLayoutPanel41.Controls.Add(this.label41, 1, 0);
             this.tableLayoutPanel41.Location = new System.Drawing.Point(2, 326);
@@ -21367,7 +21368,7 @@
             this.label41.Location = new System.Drawing.Point(50, 1);
             this.label41.Name = "label41";
             this.label41.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label41.Size = new System.Drawing.Size(342, 42);
+            this.label41.Size = new System.Drawing.Size(343, 42);
             this.label41.TabIndex = 8;
             this.label41.Text = "X57 : NG件夾持鬆開終點";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21377,7 +21378,7 @@
             this.tableLayoutPanel42.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel42.ColumnCount = 2;
             this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel42.Controls.Add(this.plC_Button42, 0, 0);
             this.tableLayoutPanel42.Controls.Add(this.label42, 1, 0);
             this.tableLayoutPanel42.Location = new System.Drawing.Point(2, 280);
@@ -21433,7 +21434,7 @@
             this.label42.Location = new System.Drawing.Point(50, 1);
             this.label42.Name = "label42";
             this.label42.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label42.Size = new System.Drawing.Size(342, 42);
+            this.label42.Size = new System.Drawing.Size(343, 42);
             this.label42.TabIndex = 8;
             this.label42.Text = "X56 : NG件夾持鬆開原點";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21443,7 +21444,7 @@
             this.tableLayoutPanel43.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel43.ColumnCount = 2;
             this.tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel43.Controls.Add(this.plC_Button43, 0, 0);
             this.tableLayoutPanel43.Controls.Add(this.label43, 1, 0);
             this.tableLayoutPanel43.Location = new System.Drawing.Point(2, 234);
@@ -21499,7 +21500,7 @@
             this.label43.Location = new System.Drawing.Point(50, 1);
             this.label43.Name = "label43";
             this.label43.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label43.Size = new System.Drawing.Size(342, 42);
+            this.label43.Size = new System.Drawing.Size(343, 42);
             this.label43.TabIndex = 8;
             this.label43.Text = "X55 :  NG蓋章4終點";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21509,7 +21510,7 @@
             this.tableLayoutPanel44.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel44.ColumnCount = 2;
             this.tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel44.Controls.Add(this.plC_Button44, 0, 0);
             this.tableLayoutPanel44.Controls.Add(this.label44, 1, 0);
             this.tableLayoutPanel44.Location = new System.Drawing.Point(2, 188);
@@ -21565,7 +21566,7 @@
             this.label44.Location = new System.Drawing.Point(50, 1);
             this.label44.Name = "label44";
             this.label44.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label44.Size = new System.Drawing.Size(342, 42);
+            this.label44.Size = new System.Drawing.Size(343, 42);
             this.label44.TabIndex = 8;
             this.label44.Text = "X54 : NG蓋章4原點";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21575,7 +21576,7 @@
             this.tableLayoutPanel45.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel45.ColumnCount = 2;
             this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel45.Controls.Add(this.plC_Button45, 0, 0);
             this.tableLayoutPanel45.Controls.Add(this.label45, 1, 0);
             this.tableLayoutPanel45.Location = new System.Drawing.Point(2, 142);
@@ -21631,7 +21632,7 @@
             this.label45.Location = new System.Drawing.Point(50, 1);
             this.label45.Name = "label45";
             this.label45.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label45.Size = new System.Drawing.Size(342, 42);
+            this.label45.Size = new System.Drawing.Size(343, 42);
             this.label45.TabIndex = 8;
             this.label45.Text = "X53 : NG蓋章3終點";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21641,7 +21642,7 @@
             this.tableLayoutPanel46.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel46.ColumnCount = 2;
             this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel46.Controls.Add(this.plC_Button46, 0, 0);
             this.tableLayoutPanel46.Controls.Add(this.label46, 1, 0);
             this.tableLayoutPanel46.Location = new System.Drawing.Point(2, 96);
@@ -21697,7 +21698,7 @@
             this.label46.Location = new System.Drawing.Point(50, 1);
             this.label46.Name = "label46";
             this.label46.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label46.Size = new System.Drawing.Size(342, 42);
+            this.label46.Size = new System.Drawing.Size(343, 42);
             this.label46.TabIndex = 8;
             this.label46.Text = "X52 : NG蓋章3原點";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21707,7 +21708,7 @@
             this.tableLayoutPanel47.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel47.ColumnCount = 2;
             this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel47.Controls.Add(this.plC_Button47, 0, 0);
             this.tableLayoutPanel47.Controls.Add(this.label47, 1, 0);
             this.tableLayoutPanel47.Location = new System.Drawing.Point(2, 49);
@@ -21763,7 +21764,7 @@
             this.label47.Location = new System.Drawing.Point(50, 1);
             this.label47.Name = "label47";
             this.label47.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label47.Size = new System.Drawing.Size(342, 42);
+            this.label47.Size = new System.Drawing.Size(343, 42);
             this.label47.TabIndex = 8;
             this.label47.Text = "X51 : NG蓋章2終點";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21773,7 +21774,7 @@
             this.tableLayoutPanel48.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel48.ColumnCount = 2;
             this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel48.Controls.Add(this.plC_Button48, 0, 0);
             this.tableLayoutPanel48.Controls.Add(this.label48, 1, 0);
             this.tableLayoutPanel48.Location = new System.Drawing.Point(2, 3);
@@ -21829,7 +21830,7 @@
             this.label48.Location = new System.Drawing.Point(50, 1);
             this.label48.Name = "label48";
             this.label48.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label48.Size = new System.Drawing.Size(342, 42);
+            this.label48.Size = new System.Drawing.Size(343, 42);
             this.label48.TabIndex = 8;
             this.label48.Text = "X50 : NG蓋章2原點";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21855,7 +21856,7 @@
             this.tableLayoutPanel49.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel49.ColumnCount = 2;
             this.tableLayoutPanel49.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel49.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel49.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel49.Controls.Add(this.plC_Button49, 0, 0);
             this.tableLayoutPanel49.Controls.Add(this.label49, 1, 0);
             this.tableLayoutPanel49.Location = new System.Drawing.Point(2, 326);
@@ -21911,7 +21912,7 @@
             this.label49.Location = new System.Drawing.Point(50, 1);
             this.label49.Name = "label49";
             this.label49.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label49.Size = new System.Drawing.Size(342, 42);
+            this.label49.Size = new System.Drawing.Size(343, 42);
             this.label49.TabIndex = 8;
             this.label49.Text = "X67 : O環分料終點";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21921,7 +21922,7 @@
             this.tableLayoutPanel50.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel50.ColumnCount = 2;
             this.tableLayoutPanel50.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel50.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel50.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel50.Controls.Add(this.plC_Button50, 0, 0);
             this.tableLayoutPanel50.Controls.Add(this.label50, 1, 0);
             this.tableLayoutPanel50.Location = new System.Drawing.Point(2, 280);
@@ -21977,7 +21978,7 @@
             this.label50.Location = new System.Drawing.Point(50, 1);
             this.label50.Name = "label50";
             this.label50.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label50.Size = new System.Drawing.Size(342, 42);
+            this.label50.Size = new System.Drawing.Size(343, 42);
             this.label50.TabIndex = 8;
             this.label50.Text = "X66 : O環分料原點";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -21987,7 +21988,7 @@
             this.tableLayoutPanel51.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel51.ColumnCount = 2;
             this.tableLayoutPanel51.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel51.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel51.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel51.Controls.Add(this.plC_Button51, 0, 0);
             this.tableLayoutPanel51.Controls.Add(this.label51, 1, 0);
             this.tableLayoutPanel51.Location = new System.Drawing.Point(2, 234);
@@ -22043,7 +22044,7 @@
             this.label51.Location = new System.Drawing.Point(50, 1);
             this.label51.Name = "label51";
             this.label51.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label51.Size = new System.Drawing.Size(342, 42);
+            this.label51.Size = new System.Drawing.Size(343, 42);
             this.label51.TabIndex = 8;
             this.label51.Text = "X65 : O環取料上下終點";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22053,7 +22054,7 @@
             this.tableLayoutPanel52.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel52.ColumnCount = 2;
             this.tableLayoutPanel52.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel52.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel52.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel52.Controls.Add(this.plC_Button52, 0, 0);
             this.tableLayoutPanel52.Controls.Add(this.label52, 1, 0);
             this.tableLayoutPanel52.Location = new System.Drawing.Point(2, 188);
@@ -22109,7 +22110,7 @@
             this.label52.Location = new System.Drawing.Point(50, 1);
             this.label52.Name = "label52";
             this.label52.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label52.Size = new System.Drawing.Size(342, 42);
+            this.label52.Size = new System.Drawing.Size(343, 42);
             this.label52.TabIndex = 8;
             this.label52.Text = "X64 : O環取料上下原點";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22119,7 +22120,7 @@
             this.tableLayoutPanel53.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel53.ColumnCount = 2;
             this.tableLayoutPanel53.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel53.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel53.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel53.Controls.Add(this.plC_Button53, 0, 0);
             this.tableLayoutPanel53.Controls.Add(this.label53, 1, 0);
             this.tableLayoutPanel53.Location = new System.Drawing.Point(2, 142);
@@ -22175,7 +22176,7 @@
             this.label53.Location = new System.Drawing.Point(50, 1);
             this.label53.Name = "label53";
             this.label53.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label53.Size = new System.Drawing.Size(342, 42);
+            this.label53.Size = new System.Drawing.Size(343, 42);
             this.label53.TabIndex = 8;
             this.label53.Text = "X63 : 成品組蓋進退終點";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22185,7 +22186,7 @@
             this.tableLayoutPanel54.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel54.ColumnCount = 2;
             this.tableLayoutPanel54.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel54.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel54.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel54.Controls.Add(this.plC_Button54, 0, 0);
             this.tableLayoutPanel54.Controls.Add(this.label54, 1, 0);
             this.tableLayoutPanel54.Location = new System.Drawing.Point(2, 96);
@@ -22241,7 +22242,7 @@
             this.label54.Location = new System.Drawing.Point(50, 1);
             this.label54.Name = "label54";
             this.label54.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label54.Size = new System.Drawing.Size(342, 42);
+            this.label54.Size = new System.Drawing.Size(343, 42);
             this.label54.TabIndex = 8;
             this.label54.Text = "X62 : 成品組蓋進退原點";
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22251,7 +22252,7 @@
             this.tableLayoutPanel55.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel55.ColumnCount = 2;
             this.tableLayoutPanel55.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel55.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel55.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel55.Controls.Add(this.plC_Button55, 0, 0);
             this.tableLayoutPanel55.Controls.Add(this.label55, 1, 0);
             this.tableLayoutPanel55.Location = new System.Drawing.Point(2, 49);
@@ -22307,7 +22308,7 @@
             this.label55.Location = new System.Drawing.Point(50, 1);
             this.label55.Name = "label55";
             this.label55.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label55.Size = new System.Drawing.Size(342, 42);
+            this.label55.Size = new System.Drawing.Size(343, 42);
             this.label55.TabIndex = 8;
             this.label55.Text = "X61 : 成品組蓋上下終點";
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22317,7 +22318,7 @@
             this.tableLayoutPanel56.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel56.ColumnCount = 2;
             this.tableLayoutPanel56.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel56.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel56.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel56.Controls.Add(this.plC_Button56, 0, 0);
             this.tableLayoutPanel56.Controls.Add(this.label56, 1, 0);
             this.tableLayoutPanel56.Location = new System.Drawing.Point(2, 3);
@@ -22373,7 +22374,7 @@
             this.label56.Location = new System.Drawing.Point(50, 1);
             this.label56.Name = "label56";
             this.label56.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label56.Size = new System.Drawing.Size(342, 42);
+            this.label56.Size = new System.Drawing.Size(343, 42);
             this.label56.TabIndex = 8;
             this.label56.Text = "X60 : 成品組蓋上下原點";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22399,7 +22400,7 @@
             this.tableLayoutPanel57.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel57.ColumnCount = 2;
             this.tableLayoutPanel57.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel57.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel57.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel57.Controls.Add(this.plC_Button57, 0, 0);
             this.tableLayoutPanel57.Controls.Add(this.label57, 1, 0);
             this.tableLayoutPanel57.Location = new System.Drawing.Point(2, 326);
@@ -22455,7 +22456,7 @@
             this.label57.Location = new System.Drawing.Point(50, 1);
             this.label57.Name = "label57";
             this.label57.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label57.Size = new System.Drawing.Size(342, 42);
+            this.label57.Size = new System.Drawing.Size(343, 42);
             this.label57.TabIndex = 8;
             this.label57.Text = "X47 : NG蓋章1終點";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22465,7 +22466,7 @@
             this.tableLayoutPanel58.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel58.ColumnCount = 2;
             this.tableLayoutPanel58.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel58.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel58.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel58.Controls.Add(this.plC_Button58, 0, 0);
             this.tableLayoutPanel58.Controls.Add(this.label58, 1, 0);
             this.tableLayoutPanel58.Location = new System.Drawing.Point(2, 280);
@@ -22521,7 +22522,7 @@
             this.label58.Location = new System.Drawing.Point(50, 1);
             this.label58.Name = "label58";
             this.label58.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label58.Size = new System.Drawing.Size(342, 42);
+            this.label58.Size = new System.Drawing.Size(343, 42);
             this.label58.TabIndex = 8;
             this.label58.Text = "X46 : NG蓋章1原點";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22531,7 +22532,7 @@
             this.tableLayoutPanel59.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel59.ColumnCount = 2;
             this.tableLayoutPanel59.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel59.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel59.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel59.Controls.Add(this.plC_Button59, 0, 0);
             this.tableLayoutPanel59.Controls.Add(this.label59, 1, 0);
             this.tableLayoutPanel59.Location = new System.Drawing.Point(2, 234);
@@ -22587,7 +22588,7 @@
             this.label59.Location = new System.Drawing.Point(50, 1);
             this.label59.Name = "label59";
             this.label59.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label59.Size = new System.Drawing.Size(342, 42);
+            this.label59.Size = new System.Drawing.Size(343, 42);
             this.label59.TabIndex = 8;
             this.label59.Text = "X45 : NG蓋章5終點";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22597,7 +22598,7 @@
             this.tableLayoutPanel60.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel60.ColumnCount = 2;
             this.tableLayoutPanel60.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel60.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel60.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel60.Controls.Add(this.plC_Button60, 0, 0);
             this.tableLayoutPanel60.Controls.Add(this.label60, 1, 0);
             this.tableLayoutPanel60.Location = new System.Drawing.Point(2, 188);
@@ -22653,7 +22654,7 @@
             this.label60.Location = new System.Drawing.Point(50, 1);
             this.label60.Name = "label60";
             this.label60.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label60.Size = new System.Drawing.Size(342, 42);
+            this.label60.Size = new System.Drawing.Size(343, 42);
             this.label60.TabIndex = 8;
             this.label60.Text = "X44 : NG蓋章5原點";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22663,7 +22664,7 @@
             this.tableLayoutPanel61.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel61.ColumnCount = 2;
             this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel61.Controls.Add(this.plC_Button61, 0, 0);
             this.tableLayoutPanel61.Controls.Add(this.label61, 1, 0);
             this.tableLayoutPanel61.Location = new System.Drawing.Point(2, 142);
@@ -22719,7 +22720,7 @@
             this.label61.Location = new System.Drawing.Point(50, 1);
             this.label61.Name = "label61";
             this.label61.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label61.Size = new System.Drawing.Size(342, 42);
+            this.label61.Size = new System.Drawing.Size(343, 42);
             this.label61.TabIndex = 8;
             this.label61.Text = "X43 : NG蓋章印泥進退終點";
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22729,7 +22730,7 @@
             this.tableLayoutPanel62.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel62.ColumnCount = 2;
             this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel62.Controls.Add(this.plC_Button62, 0, 0);
             this.tableLayoutPanel62.Controls.Add(this.label62, 1, 0);
             this.tableLayoutPanel62.Location = new System.Drawing.Point(2, 96);
@@ -22785,7 +22786,7 @@
             this.label62.Location = new System.Drawing.Point(50, 1);
             this.label62.Name = "label62";
             this.label62.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label62.Size = new System.Drawing.Size(342, 42);
+            this.label62.Size = new System.Drawing.Size(343, 42);
             this.label62.TabIndex = 8;
             this.label62.Text = "X42 : NG蓋章印泥進退原點";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22795,7 +22796,7 @@
             this.tableLayoutPanel63.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel63.ColumnCount = 2;
             this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel63.Controls.Add(this.plC_Button63, 0, 0);
             this.tableLayoutPanel63.Controls.Add(this.label63, 1, 0);
             this.tableLayoutPanel63.Location = new System.Drawing.Point(2, 49);
@@ -22851,7 +22852,7 @@
             this.label63.Location = new System.Drawing.Point(50, 1);
             this.label63.Name = "label63";
             this.label63.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label63.Size = new System.Drawing.Size(342, 42);
+            this.label63.Size = new System.Drawing.Size(343, 42);
             this.label63.TabIndex = 8;
             this.label63.Text = "X41 : NG件推出下料終點";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22861,7 +22862,7 @@
             this.tableLayoutPanel64.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel64.ColumnCount = 2;
             this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel64.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel64.Controls.Add(this.plC_Button64, 0, 0);
             this.tableLayoutPanel64.Controls.Add(this.label64, 1, 0);
             this.tableLayoutPanel64.Location = new System.Drawing.Point(2, 3);
@@ -22917,7 +22918,7 @@
             this.label64.Location = new System.Drawing.Point(50, 1);
             this.label64.Name = "label64";
             this.label64.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label64.Size = new System.Drawing.Size(342, 42);
+            this.label64.Size = new System.Drawing.Size(343, 42);
             this.label64.TabIndex = 8;
             this.label64.Text = "X40 : NG件推出下料原點";
             this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -22953,7 +22954,7 @@
             this.tableLayoutPanel129.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel129.ColumnCount = 2;
             this.tableLayoutPanel129.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel129.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel129.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel129.Controls.Add(this.plC_Button161, 0, 0);
             this.tableLayoutPanel129.Controls.Add(this.label129, 1, 0);
             this.tableLayoutPanel129.Location = new System.Drawing.Point(2, 326);
@@ -23009,7 +23010,7 @@
             this.label129.Location = new System.Drawing.Point(50, 1);
             this.label129.Name = "label129";
             this.label129.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label129.Size = new System.Drawing.Size(342, 42);
+            this.label129.Size = new System.Drawing.Size(343, 42);
             this.label129.TabIndex = 8;
             this.label129.Text = "X107 : 備用";
             this.label129.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23019,7 +23020,7 @@
             this.tableLayoutPanel130.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel130.ColumnCount = 2;
             this.tableLayoutPanel130.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel130.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel130.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel130.Controls.Add(this.plC_Button162, 0, 0);
             this.tableLayoutPanel130.Controls.Add(this.label130, 1, 0);
             this.tableLayoutPanel130.Location = new System.Drawing.Point(2, 280);
@@ -23075,7 +23076,7 @@
             this.label130.Location = new System.Drawing.Point(50, 1);
             this.label130.Name = "label130";
             this.label130.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label130.Size = new System.Drawing.Size(342, 42);
+            this.label130.Size = new System.Drawing.Size(343, 42);
             this.label130.TabIndex = 8;
             this.label130.Text = "X106 : 備用";
             this.label130.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23085,7 +23086,7 @@
             this.tableLayoutPanel131.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel131.ColumnCount = 2;
             this.tableLayoutPanel131.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel131.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel131.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel131.Controls.Add(this.plC_Button169, 0, 0);
             this.tableLayoutPanel131.Controls.Add(this.label131, 1, 0);
             this.tableLayoutPanel131.Location = new System.Drawing.Point(2, 234);
@@ -23141,7 +23142,7 @@
             this.label131.Location = new System.Drawing.Point(50, 1);
             this.label131.Name = "label131";
             this.label131.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label131.Size = new System.Drawing.Size(342, 42);
+            this.label131.Size = new System.Drawing.Size(343, 42);
             this.label131.TabIndex = 8;
             this.label131.Text = "X105 : 備用";
             this.label131.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23151,7 +23152,7 @@
             this.tableLayoutPanel132.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel132.ColumnCount = 2;
             this.tableLayoutPanel132.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel132.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel132.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel132.Controls.Add(this.plC_Button170, 0, 0);
             this.tableLayoutPanel132.Controls.Add(this.label132, 1, 0);
             this.tableLayoutPanel132.Location = new System.Drawing.Point(2, 188);
@@ -23207,7 +23208,7 @@
             this.label132.Location = new System.Drawing.Point(50, 1);
             this.label132.Name = "label132";
             this.label132.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label132.Size = new System.Drawing.Size(342, 42);
+            this.label132.Size = new System.Drawing.Size(343, 42);
             this.label132.TabIndex = 8;
             this.label132.Text = "X104 : 成品組蓋吸真空檢知";
             this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23217,7 +23218,7 @@
             this.tableLayoutPanel133.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel133.ColumnCount = 2;
             this.tableLayoutPanel133.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel133.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel133.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel133.Controls.Add(this.plC_Button171, 0, 0);
             this.tableLayoutPanel133.Controls.Add(this.label133, 1, 0);
             this.tableLayoutPanel133.Location = new System.Drawing.Point(2, 142);
@@ -23273,7 +23274,7 @@
             this.label133.Location = new System.Drawing.Point(50, 1);
             this.label133.Name = "label133";
             this.label133.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label133.Size = new System.Drawing.Size(342, 42);
+            this.label133.Size = new System.Drawing.Size(343, 42);
             this.label133.TabIndex = 8;
             this.label133.Text = "X103 : 第二站有無料檢知";
             this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23283,7 +23284,7 @@
             this.tableLayoutPanel134.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel134.ColumnCount = 2;
             this.tableLayoutPanel134.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel134.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel134.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel134.Controls.Add(this.plC_Button175, 0, 0);
             this.tableLayoutPanel134.Controls.Add(this.label134, 1, 0);
             this.tableLayoutPanel134.Location = new System.Drawing.Point(2, 96);
@@ -23339,7 +23340,7 @@
             this.label134.Location = new System.Drawing.Point(50, 1);
             this.label134.Name = "label134";
             this.label134.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label134.Size = new System.Drawing.Size(342, 42);
+            this.label134.Size = new System.Drawing.Size(343, 42);
             this.label134.TabIndex = 8;
             this.label134.Text = "X102 : 緊急停止";
             this.label134.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23349,7 +23350,7 @@
             this.tableLayoutPanel135.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel135.ColumnCount = 2;
             this.tableLayoutPanel135.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel135.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel135.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel135.Controls.Add(this.plC_Button176, 0, 0);
             this.tableLayoutPanel135.Controls.Add(this.label135, 1, 0);
             this.tableLayoutPanel135.Location = new System.Drawing.Point(2, 49);
@@ -23405,7 +23406,7 @@
             this.label135.Location = new System.Drawing.Point(50, 1);
             this.label135.Name = "label135";
             this.label135.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label135.Size = new System.Drawing.Size(342, 42);
+            this.label135.Size = new System.Drawing.Size(343, 42);
             this.label135.TabIndex = 8;
             this.label135.Text = "X101 : 啟動(右)";
             this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23415,7 +23416,7 @@
             this.tableLayoutPanel136.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel136.ColumnCount = 2;
             this.tableLayoutPanel136.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel136.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
+            this.tableLayoutPanel136.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel136.Controls.Add(this.plC_Button177, 0, 0);
             this.tableLayoutPanel136.Controls.Add(this.label136, 1, 0);
             this.tableLayoutPanel136.Location = new System.Drawing.Point(2, 3);
@@ -23471,7 +23472,7 @@
             this.label136.Location = new System.Drawing.Point(50, 1);
             this.label136.Name = "label136";
             this.label136.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label136.Size = new System.Drawing.Size(342, 42);
+            this.label136.Size = new System.Drawing.Size(343, 42);
             this.label136.TabIndex = 8;
             this.label136.Text = "X100 : 啟動(左)";
             this.label136.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -23790,6 +23791,7 @@
             // 
             // tabPage14
             // 
+            this.tabPage14.Controls.Add(this.plC_RJ_Button1);
             this.tabPage14.Controls.Add(this.plC_RJ_Button_匯出);
             this.tabPage14.Controls.Add(this.textBox_規格);
             this.tabPage14.Controls.Add(this.rJ_DatePicker_結束時間);
@@ -23807,6 +23809,269 @@
             this.tabPage14.TabIndex = 6;
             this.tabPage14.Text = "表單";
             this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // plC_RJ_Button_匯出
+            // 
+            this.plC_RJ_Button_匯出.AutoResetState = false;
+            this.plC_RJ_Button_匯出.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_匯出.Bool = false;
+            this.plC_RJ_Button_匯出.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_匯出.BorderRadius = 10;
+            this.plC_RJ_Button_匯出.BorderSize = 0;
+            this.plC_RJ_Button_匯出.but_press = false;
+            this.plC_RJ_Button_匯出.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_匯出.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_匯出.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_匯出.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_匯出.GUID = "";
+            this.plC_RJ_Button_匯出.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_匯出.Location = new System.Drawing.Point(1001, 785);
+            this.plC_RJ_Button_匯出.Name = "plC_RJ_Button_匯出";
+            this.plC_RJ_Button_匯出.OFF_文字內容 = "匯出";
+            this.plC_RJ_Button_匯出.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_匯出.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_匯出.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_匯出.ON_BorderSize = 5;
+            this.plC_RJ_Button_匯出.ON_文字內容 = "匯出";
+            this.plC_RJ_Button_匯出.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_匯出.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_匯出.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_匯出.ShadowColor = System.Drawing.Color.DimGray;
+            this.plC_RJ_Button_匯出.ShadowSize = 3;
+            this.plC_RJ_Button_匯出.ShowLoadingForm = false;
+            this.plC_RJ_Button_匯出.Size = new System.Drawing.Size(149, 63);
+            this.plC_RJ_Button_匯出.State = false;
+            this.plC_RJ_Button_匯出.TabIndex = 17;
+            this.plC_RJ_Button_匯出.Text = "匯出";
+            this.plC_RJ_Button_匯出.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_匯出.Texts = "匯出";
+            this.plC_RJ_Button_匯出.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_匯出.字型鎖住 = false;
+            this.plC_RJ_Button_匯出.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_匯出.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_匯出.文字鎖住 = false;
+            this.plC_RJ_Button_匯出.讀取位元反向 = false;
+            this.plC_RJ_Button_匯出.讀寫鎖住 = false;
+            this.plC_RJ_Button_匯出.音效 = true;
+            this.plC_RJ_Button_匯出.顯示 = false;
+            this.plC_RJ_Button_匯出.顯示狀態 = false;
+            // 
+            // textBox_規格
+            // 
+            this.textBox_規格.Location = new System.Drawing.Point(1036, 741);
+            this.textBox_規格.Name = "textBox_規格";
+            this.textBox_規格.Size = new System.Drawing.Size(303, 22);
+            this.textBox_規格.TabIndex = 16;
+            // 
+            // rJ_DatePicker_結束時間
+            // 
+            this.rJ_DatePicker_結束時間.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rJ_DatePicker_結束時間.BorderSize = 0;
+            this.rJ_DatePicker_結束時間.Font = new System.Drawing.Font("新細明體", 15.75F);
+            this.rJ_DatePicker_結束時間.Location = new System.Drawing.Point(720, 785);
+            this.rJ_DatePicker_結束時間.MinimumSize = new System.Drawing.Size(250, 35);
+            this.rJ_DatePicker_結束時間.Name = "rJ_DatePicker_結束時間";
+            this.rJ_DatePicker_結束時間.Size = new System.Drawing.Size(250, 35);
+            this.rJ_DatePicker_結束時間.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.rJ_DatePicker_結束時間.TabIndex = 15;
+            this.rJ_DatePicker_結束時間.TextColor = System.Drawing.Color.White;
+            // 
+            // rJ_DatePicker_起始時間
+            // 
+            this.rJ_DatePicker_起始時間.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rJ_DatePicker_起始時間.BorderSize = 0;
+            this.rJ_DatePicker_起始時間.Font = new System.Drawing.Font("新細明體", 15.75F);
+            this.rJ_DatePicker_起始時間.Location = new System.Drawing.Point(720, 744);
+            this.rJ_DatePicker_起始時間.MinimumSize = new System.Drawing.Size(250, 35);
+            this.rJ_DatePicker_起始時間.Name = "rJ_DatePicker_起始時間";
+            this.rJ_DatePicker_起始時間.Size = new System.Drawing.Size(250, 35);
+            this.rJ_DatePicker_起始時間.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.rJ_DatePicker_起始時間.TabIndex = 14;
+            this.rJ_DatePicker_起始時間.TextColor = System.Drawing.Color.White;
+            // 
+            // plC_RJ_Button_顯示全部
+            // 
+            this.plC_RJ_Button_顯示全部.AutoResetState = false;
+            this.plC_RJ_Button_顯示全部.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_顯示全部.Bool = false;
+            this.plC_RJ_Button_顯示全部.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_顯示全部.BorderRadius = 10;
+            this.plC_RJ_Button_顯示全部.BorderSize = 0;
+            this.plC_RJ_Button_顯示全部.but_press = false;
+            this.plC_RJ_Button_顯示全部.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_顯示全部.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_顯示全部.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_顯示全部.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_顯示全部.GUID = "";
+            this.plC_RJ_Button_顯示全部.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_顯示全部.Location = new System.Drawing.Point(1212, 656);
+            this.plC_RJ_Button_顯示全部.Name = "plC_RJ_Button_顯示全部";
+            this.plC_RJ_Button_顯示全部.OFF_文字內容 = "顯示全部";
+            this.plC_RJ_Button_顯示全部.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_顯示全部.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_顯示全部.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_顯示全部.ON_BorderSize = 5;
+            this.plC_RJ_Button_顯示全部.ON_文字內容 = "顯示全部";
+            this.plC_RJ_Button_顯示全部.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_顯示全部.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_顯示全部.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_顯示全部.ShadowColor = System.Drawing.Color.DimGray;
+            this.plC_RJ_Button_顯示全部.ShadowSize = 3;
+            this.plC_RJ_Button_顯示全部.ShowLoadingForm = false;
+            this.plC_RJ_Button_顯示全部.Size = new System.Drawing.Size(149, 63);
+            this.plC_RJ_Button_顯示全部.State = false;
+            this.plC_RJ_Button_顯示全部.TabIndex = 13;
+            this.plC_RJ_Button_顯示全部.Text = "顯示全部";
+            this.plC_RJ_Button_顯示全部.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_顯示全部.Texts = "顯示全部";
+            this.plC_RJ_Button_顯示全部.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_顯示全部.字型鎖住 = false;
+            this.plC_RJ_Button_顯示全部.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_顯示全部.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_顯示全部.文字鎖住 = false;
+            this.plC_RJ_Button_顯示全部.讀取位元反向 = false;
+            this.plC_RJ_Button_顯示全部.讀寫鎖住 = false;
+            this.plC_RJ_Button_顯示全部.音效 = true;
+            this.plC_RJ_Button_顯示全部.顯示 = false;
+            this.plC_RJ_Button_顯示全部.顯示狀態 = false;
+            // 
+            // plC_RJ_Button_刪除資料
+            // 
+            this.plC_RJ_Button_刪除資料.AutoResetState = false;
+            this.plC_RJ_Button_刪除資料.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_刪除資料.Bool = false;
+            this.plC_RJ_Button_刪除資料.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_刪除資料.BorderRadius = 10;
+            this.plC_RJ_Button_刪除資料.BorderSize = 0;
+            this.plC_RJ_Button_刪除資料.but_press = false;
+            this.plC_RJ_Button_刪除資料.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_刪除資料.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_刪除資料.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_刪除資料.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_刪除資料.GUID = "";
+            this.plC_RJ_Button_刪除資料.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_刪除資料.Location = new System.Drawing.Point(1030, 656);
+            this.plC_RJ_Button_刪除資料.Name = "plC_RJ_Button_刪除資料";
+            this.plC_RJ_Button_刪除資料.OFF_文字內容 = "刪除資料";
+            this.plC_RJ_Button_刪除資料.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_刪除資料.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_刪除資料.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_刪除資料.ON_BorderSize = 5;
+            this.plC_RJ_Button_刪除資料.ON_文字內容 = "刪除資料";
+            this.plC_RJ_Button_刪除資料.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_刪除資料.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_刪除資料.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_刪除資料.ShadowColor = System.Drawing.Color.DimGray;
+            this.plC_RJ_Button_刪除資料.ShadowSize = 3;
+            this.plC_RJ_Button_刪除資料.ShowLoadingForm = false;
+            this.plC_RJ_Button_刪除資料.Size = new System.Drawing.Size(149, 63);
+            this.plC_RJ_Button_刪除資料.State = false;
+            this.plC_RJ_Button_刪除資料.TabIndex = 12;
+            this.plC_RJ_Button_刪除資料.Text = "刪除資料";
+            this.plC_RJ_Button_刪除資料.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_刪除資料.Texts = "刪除資料";
+            this.plC_RJ_Button_刪除資料.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_刪除資料.字型鎖住 = false;
+            this.plC_RJ_Button_刪除資料.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_刪除資料.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_刪除資料.文字鎖住 = false;
+            this.plC_RJ_Button_刪除資料.讀取位元反向 = false;
+            this.plC_RJ_Button_刪除資料.讀寫鎖住 = false;
+            this.plC_RJ_Button_刪除資料.音效 = true;
+            this.plC_RJ_Button_刪除資料.顯示 = false;
+            this.plC_RJ_Button_刪除資料.顯示狀態 = false;
+            // 
+            // plC_RJ_Button_更新資料
+            // 
+            this.plC_RJ_Button_更新資料.AutoResetState = false;
+            this.plC_RJ_Button_更新資料.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_更新資料.Bool = false;
+            this.plC_RJ_Button_更新資料.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_更新資料.BorderRadius = 10;
+            this.plC_RJ_Button_更新資料.BorderSize = 0;
+            this.plC_RJ_Button_更新資料.but_press = false;
+            this.plC_RJ_Button_更新資料.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_更新資料.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_更新資料.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_更新資料.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_更新資料.GUID = "";
+            this.plC_RJ_Button_更新資料.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_更新資料.Location = new System.Drawing.Point(875, 656);
+            this.plC_RJ_Button_更新資料.Name = "plC_RJ_Button_更新資料";
+            this.plC_RJ_Button_更新資料.OFF_文字內容 = "更新資料";
+            this.plC_RJ_Button_更新資料.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_更新資料.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_更新資料.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_更新資料.ON_BorderSize = 5;
+            this.plC_RJ_Button_更新資料.ON_文字內容 = "更新資料";
+            this.plC_RJ_Button_更新資料.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_更新資料.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_更新資料.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_更新資料.ShadowColor = System.Drawing.Color.DimGray;
+            this.plC_RJ_Button_更新資料.ShadowSize = 3;
+            this.plC_RJ_Button_更新資料.ShowLoadingForm = false;
+            this.plC_RJ_Button_更新資料.Size = new System.Drawing.Size(149, 63);
+            this.plC_RJ_Button_更新資料.State = false;
+            this.plC_RJ_Button_更新資料.TabIndex = 11;
+            this.plC_RJ_Button_更新資料.Text = "更新資料";
+            this.plC_RJ_Button_更新資料.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_更新資料.Texts = "更新資料";
+            this.plC_RJ_Button_更新資料.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_更新資料.字型鎖住 = false;
+            this.plC_RJ_Button_更新資料.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_更新資料.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_更新資料.文字鎖住 = false;
+            this.plC_RJ_Button_更新資料.讀取位元反向 = false;
+            this.plC_RJ_Button_更新資料.讀寫鎖住 = false;
+            this.plC_RJ_Button_更新資料.音效 = true;
+            this.plC_RJ_Button_更新資料.顯示 = false;
+            this.plC_RJ_Button_更新資料.顯示狀態 = false;
+            // 
+            // plC_RJ_Button_新增資料
+            // 
+            this.plC_RJ_Button_新增資料.AutoResetState = false;
+            this.plC_RJ_Button_新增資料.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_新增資料.Bool = false;
+            this.plC_RJ_Button_新增資料.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_新增資料.BorderRadius = 10;
+            this.plC_RJ_Button_新增資料.BorderSize = 0;
+            this.plC_RJ_Button_新增資料.but_press = false;
+            this.plC_RJ_Button_新增資料.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_新增資料.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_新增資料.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_新增資料.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_新增資料.GUID = "";
+            this.plC_RJ_Button_新增資料.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_新增資料.Location = new System.Drawing.Point(720, 656);
+            this.plC_RJ_Button_新增資料.Name = "plC_RJ_Button_新增資料";
+            this.plC_RJ_Button_新增資料.OFF_文字內容 = "新增資料";
+            this.plC_RJ_Button_新增資料.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_新增資料.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_新增資料.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_新增資料.ON_BorderSize = 5;
+            this.plC_RJ_Button_新增資料.ON_文字內容 = "新增資料";
+            this.plC_RJ_Button_新增資料.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button_新增資料.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_新增資料.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_新增資料.ShadowColor = System.Drawing.Color.DimGray;
+            this.plC_RJ_Button_新增資料.ShadowSize = 3;
+            this.plC_RJ_Button_新增資料.ShowLoadingForm = false;
+            this.plC_RJ_Button_新增資料.Size = new System.Drawing.Size(149, 63);
+            this.plC_RJ_Button_新增資料.State = false;
+            this.plC_RJ_Button_新增資料.TabIndex = 10;
+            this.plC_RJ_Button_新增資料.Text = "新增資料";
+            this.plC_RJ_Button_新增資料.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_新增資料.Texts = "新增資料";
+            this.plC_RJ_Button_新增資料.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_新增資料.字型鎖住 = false;
+            this.plC_RJ_Button_新增資料.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_新增資料.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_新增資料.文字鎖住 = false;
+            this.plC_RJ_Button_新增資料.讀取位元反向 = false;
+            this.plC_RJ_Button_新增資料.讀寫鎖住 = false;
+            this.plC_RJ_Button_新增資料.音效 = true;
+            this.plC_RJ_Button_新增資料.顯示 = false;
+            this.plC_RJ_Button_新增資料.顯示狀態 = false;
             // 
             // sqL_DataGridView_線圈測試結果
             // 
@@ -23873,7 +24138,7 @@
             this.tableLayoutPanel151.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel151.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel151.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel151.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel151.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel151.Controls.Add(this.plC_WordBox_測試日期, 3, 1);
             this.tableLayoutPanel151.Controls.Add(this.plC_WordBox_測試工令, 2, 1);
             this.tableLayoutPanel151.Controls.Add(this.plC_WordBox_測試批號, 1, 1);
@@ -25140,268 +25405,51 @@
             this.saveFileDialog_SaveExcel.DefaultExt = "txt";
             this.saveFileDialog_SaveExcel.Filter = "Excel File (*.xls)|*.xls|txt File (*.txt)|*.txt;";
             // 
-            // plC_RJ_Button_新增資料
+            // plC_RJ_Button1
             // 
-            this.plC_RJ_Button_新增資料.AutoResetState = false;
-            this.plC_RJ_Button_新增資料.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.plC_RJ_Button_新增資料.Bool = false;
-            this.plC_RJ_Button_新增資料.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_新增資料.BorderRadius = 10;
-            this.plC_RJ_Button_新增資料.BorderSize = 0;
-            this.plC_RJ_Button_新增資料.but_press = false;
-            this.plC_RJ_Button_新增資料.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_新增資料.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_新增資料.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_新增資料.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_新增資料.GUID = "";
-            this.plC_RJ_Button_新增資料.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_新增資料.Location = new System.Drawing.Point(720, 656);
-            this.plC_RJ_Button_新增資料.Name = "plC_RJ_Button_新增資料";
-            this.plC_RJ_Button_新增資料.OFF_文字內容 = "新增資料";
-            this.plC_RJ_Button_新增資料.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_新增資料.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_新增資料.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_新增資料.ON_BorderSize = 5;
-            this.plC_RJ_Button_新增資料.ON_文字內容 = "新增資料";
-            this.plC_RJ_Button_新增資料.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_新增資料.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_新增資料.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_新增資料.ShadowColor = System.Drawing.Color.DimGray;
-            this.plC_RJ_Button_新增資料.ShadowSize = 3;
-            this.plC_RJ_Button_新增資料.ShowLoadingForm = false;
-            this.plC_RJ_Button_新增資料.Size = new System.Drawing.Size(149, 63);
-            this.plC_RJ_Button_新增資料.State = false;
-            this.plC_RJ_Button_新增資料.TabIndex = 10;
-            this.plC_RJ_Button_新增資料.Text = "新增資料";
-            this.plC_RJ_Button_新增資料.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_新增資料.Texts = "新增資料";
-            this.plC_RJ_Button_新增資料.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_新增資料.字型鎖住 = false;
-            this.plC_RJ_Button_新增資料.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_新增資料.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_新增資料.文字鎖住 = false;
-            this.plC_RJ_Button_新增資料.讀取位元反向 = false;
-            this.plC_RJ_Button_新增資料.讀寫鎖住 = false;
-            this.plC_RJ_Button_新增資料.音效 = true;
-            this.plC_RJ_Button_新增資料.顯示 = false;
-            this.plC_RJ_Button_新增資料.顯示狀態 = false;
-            // 
-            // plC_RJ_Button_更新資料
-            // 
-            this.plC_RJ_Button_更新資料.AutoResetState = false;
-            this.plC_RJ_Button_更新資料.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.plC_RJ_Button_更新資料.Bool = false;
-            this.plC_RJ_Button_更新資料.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_更新資料.BorderRadius = 10;
-            this.plC_RJ_Button_更新資料.BorderSize = 0;
-            this.plC_RJ_Button_更新資料.but_press = false;
-            this.plC_RJ_Button_更新資料.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_更新資料.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_更新資料.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_更新資料.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_更新資料.GUID = "";
-            this.plC_RJ_Button_更新資料.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_更新資料.Location = new System.Drawing.Point(875, 656);
-            this.plC_RJ_Button_更新資料.Name = "plC_RJ_Button_更新資料";
-            this.plC_RJ_Button_更新資料.OFF_文字內容 = "更新資料";
-            this.plC_RJ_Button_更新資料.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_更新資料.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_更新資料.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_更新資料.ON_BorderSize = 5;
-            this.plC_RJ_Button_更新資料.ON_文字內容 = "更新資料";
-            this.plC_RJ_Button_更新資料.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_更新資料.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_更新資料.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_更新資料.ShadowColor = System.Drawing.Color.DimGray;
-            this.plC_RJ_Button_更新資料.ShadowSize = 3;
-            this.plC_RJ_Button_更新資料.ShowLoadingForm = false;
-            this.plC_RJ_Button_更新資料.Size = new System.Drawing.Size(149, 63);
-            this.plC_RJ_Button_更新資料.State = false;
-            this.plC_RJ_Button_更新資料.TabIndex = 11;
-            this.plC_RJ_Button_更新資料.Text = "更新資料";
-            this.plC_RJ_Button_更新資料.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_更新資料.Texts = "更新資料";
-            this.plC_RJ_Button_更新資料.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_更新資料.字型鎖住 = false;
-            this.plC_RJ_Button_更新資料.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_更新資料.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_更新資料.文字鎖住 = false;
-            this.plC_RJ_Button_更新資料.讀取位元反向 = false;
-            this.plC_RJ_Button_更新資料.讀寫鎖住 = false;
-            this.plC_RJ_Button_更新資料.音效 = true;
-            this.plC_RJ_Button_更新資料.顯示 = false;
-            this.plC_RJ_Button_更新資料.顯示狀態 = false;
-            // 
-            // plC_RJ_Button_刪除資料
-            // 
-            this.plC_RJ_Button_刪除資料.AutoResetState = false;
-            this.plC_RJ_Button_刪除資料.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.plC_RJ_Button_刪除資料.Bool = false;
-            this.plC_RJ_Button_刪除資料.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_刪除資料.BorderRadius = 10;
-            this.plC_RJ_Button_刪除資料.BorderSize = 0;
-            this.plC_RJ_Button_刪除資料.but_press = false;
-            this.plC_RJ_Button_刪除資料.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_刪除資料.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_刪除資料.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_刪除資料.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_刪除資料.GUID = "";
-            this.plC_RJ_Button_刪除資料.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_刪除資料.Location = new System.Drawing.Point(1030, 656);
-            this.plC_RJ_Button_刪除資料.Name = "plC_RJ_Button_刪除資料";
-            this.plC_RJ_Button_刪除資料.OFF_文字內容 = "刪除資料";
-            this.plC_RJ_Button_刪除資料.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_刪除資料.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_刪除資料.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_刪除資料.ON_BorderSize = 5;
-            this.plC_RJ_Button_刪除資料.ON_文字內容 = "刪除資料";
-            this.plC_RJ_Button_刪除資料.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_刪除資料.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_刪除資料.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_刪除資料.ShadowColor = System.Drawing.Color.DimGray;
-            this.plC_RJ_Button_刪除資料.ShadowSize = 3;
-            this.plC_RJ_Button_刪除資料.ShowLoadingForm = false;
-            this.plC_RJ_Button_刪除資料.Size = new System.Drawing.Size(149, 63);
-            this.plC_RJ_Button_刪除資料.State = false;
-            this.plC_RJ_Button_刪除資料.TabIndex = 12;
-            this.plC_RJ_Button_刪除資料.Text = "刪除資料";
-            this.plC_RJ_Button_刪除資料.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_刪除資料.Texts = "刪除資料";
-            this.plC_RJ_Button_刪除資料.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_刪除資料.字型鎖住 = false;
-            this.plC_RJ_Button_刪除資料.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_刪除資料.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_刪除資料.文字鎖住 = false;
-            this.plC_RJ_Button_刪除資料.讀取位元反向 = false;
-            this.plC_RJ_Button_刪除資料.讀寫鎖住 = false;
-            this.plC_RJ_Button_刪除資料.音效 = true;
-            this.plC_RJ_Button_刪除資料.顯示 = false;
-            this.plC_RJ_Button_刪除資料.顯示狀態 = false;
-            // 
-            // plC_RJ_Button_顯示全部
-            // 
-            this.plC_RJ_Button_顯示全部.AutoResetState = false;
-            this.plC_RJ_Button_顯示全部.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.plC_RJ_Button_顯示全部.Bool = false;
-            this.plC_RJ_Button_顯示全部.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_顯示全部.BorderRadius = 10;
-            this.plC_RJ_Button_顯示全部.BorderSize = 0;
-            this.plC_RJ_Button_顯示全部.but_press = false;
-            this.plC_RJ_Button_顯示全部.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_顯示全部.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_顯示全部.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_顯示全部.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_顯示全部.GUID = "";
-            this.plC_RJ_Button_顯示全部.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_顯示全部.Location = new System.Drawing.Point(1212, 656);
-            this.plC_RJ_Button_顯示全部.Name = "plC_RJ_Button_顯示全部";
-            this.plC_RJ_Button_顯示全部.OFF_文字內容 = "顯示全部";
-            this.plC_RJ_Button_顯示全部.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_顯示全部.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_顯示全部.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_顯示全部.ON_BorderSize = 5;
-            this.plC_RJ_Button_顯示全部.ON_文字內容 = "顯示全部";
-            this.plC_RJ_Button_顯示全部.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_顯示全部.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_顯示全部.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_顯示全部.ShadowColor = System.Drawing.Color.DimGray;
-            this.plC_RJ_Button_顯示全部.ShadowSize = 3;
-            this.plC_RJ_Button_顯示全部.ShowLoadingForm = false;
-            this.plC_RJ_Button_顯示全部.Size = new System.Drawing.Size(149, 63);
-            this.plC_RJ_Button_顯示全部.State = false;
-            this.plC_RJ_Button_顯示全部.TabIndex = 13;
-            this.plC_RJ_Button_顯示全部.Text = "顯示全部";
-            this.plC_RJ_Button_顯示全部.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_顯示全部.Texts = "顯示全部";
-            this.plC_RJ_Button_顯示全部.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_顯示全部.字型鎖住 = false;
-            this.plC_RJ_Button_顯示全部.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_顯示全部.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_顯示全部.文字鎖住 = false;
-            this.plC_RJ_Button_顯示全部.讀取位元反向 = false;
-            this.plC_RJ_Button_顯示全部.讀寫鎖住 = false;
-            this.plC_RJ_Button_顯示全部.音效 = true;
-            this.plC_RJ_Button_顯示全部.顯示 = false;
-            this.plC_RJ_Button_顯示全部.顯示狀態 = false;
-            // 
-            // rJ_DatePicker_起始時間
-            // 
-            this.rJ_DatePicker_起始時間.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rJ_DatePicker_起始時間.BorderSize = 0;
-            this.rJ_DatePicker_起始時間.Font = new System.Drawing.Font("新細明體", 15.75F);
-            this.rJ_DatePicker_起始時間.Location = new System.Drawing.Point(720, 744);
-            this.rJ_DatePicker_起始時間.MinimumSize = new System.Drawing.Size(250, 35);
-            this.rJ_DatePicker_起始時間.Name = "rJ_DatePicker_起始時間";
-            this.rJ_DatePicker_起始時間.Size = new System.Drawing.Size(250, 35);
-            this.rJ_DatePicker_起始時間.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rJ_DatePicker_起始時間.TabIndex = 14;
-            this.rJ_DatePicker_起始時間.TextColor = System.Drawing.Color.White;
-            // 
-            // rJ_DatePicker_結束時間
-            // 
-            this.rJ_DatePicker_結束時間.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rJ_DatePicker_結束時間.BorderSize = 0;
-            this.rJ_DatePicker_結束時間.Font = new System.Drawing.Font("新細明體", 15.75F);
-            this.rJ_DatePicker_結束時間.Location = new System.Drawing.Point(720, 785);
-            this.rJ_DatePicker_結束時間.MinimumSize = new System.Drawing.Size(250, 35);
-            this.rJ_DatePicker_結束時間.Name = "rJ_DatePicker_結束時間";
-            this.rJ_DatePicker_結束時間.Size = new System.Drawing.Size(250, 35);
-            this.rJ_DatePicker_結束時間.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.rJ_DatePicker_結束時間.TabIndex = 15;
-            this.rJ_DatePicker_結束時間.TextColor = System.Drawing.Color.White;
-            // 
-            // textBox_規格
-            // 
-            this.textBox_規格.Location = new System.Drawing.Point(1036, 741);
-            this.textBox_規格.Name = "textBox_規格";
-            this.textBox_規格.Size = new System.Drawing.Size(303, 22);
-            this.textBox_規格.TabIndex = 16;
-            // 
-            // plC_RJ_Button_匯出
-            // 
-            this.plC_RJ_Button_匯出.AutoResetState = false;
-            this.plC_RJ_Button_匯出.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.plC_RJ_Button_匯出.Bool = false;
-            this.plC_RJ_Button_匯出.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_匯出.BorderRadius = 10;
-            this.plC_RJ_Button_匯出.BorderSize = 0;
-            this.plC_RJ_Button_匯出.but_press = false;
-            this.plC_RJ_Button_匯出.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_匯出.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_匯出.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_匯出.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_匯出.GUID = "";
-            this.plC_RJ_Button_匯出.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_匯出.Location = new System.Drawing.Point(1001, 785);
-            this.plC_RJ_Button_匯出.Name = "plC_RJ_Button_匯出";
-            this.plC_RJ_Button_匯出.OFF_文字內容 = "匯出";
-            this.plC_RJ_Button_匯出.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_匯出.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_匯出.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_匯出.ON_BorderSize = 5;
-            this.plC_RJ_Button_匯出.ON_文字內容 = "匯出";
-            this.plC_RJ_Button_匯出.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plC_RJ_Button_匯出.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_匯出.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_匯出.ShadowColor = System.Drawing.Color.DimGray;
-            this.plC_RJ_Button_匯出.ShadowSize = 3;
-            this.plC_RJ_Button_匯出.ShowLoadingForm = false;
-            this.plC_RJ_Button_匯出.Size = new System.Drawing.Size(149, 63);
-            this.plC_RJ_Button_匯出.State = false;
-            this.plC_RJ_Button_匯出.TabIndex = 17;
-            this.plC_RJ_Button_匯出.Text = "匯出";
-            this.plC_RJ_Button_匯出.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_匯出.Texts = "匯出";
-            this.plC_RJ_Button_匯出.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_匯出.字型鎖住 = false;
-            this.plC_RJ_Button_匯出.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_匯出.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_匯出.文字鎖住 = false;
-            this.plC_RJ_Button_匯出.讀取位元反向 = false;
-            this.plC_RJ_Button_匯出.讀寫鎖住 = false;
-            this.plC_RJ_Button_匯出.音效 = true;
-            this.plC_RJ_Button_匯出.顯示 = false;
-            this.plC_RJ_Button_匯出.顯示狀態 = false;
+            this.plC_RJ_Button1.AutoResetState = false;
+            this.plC_RJ_Button1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button1.Bool = false;
+            this.plC_RJ_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button1.BorderRadius = 10;
+            this.plC_RJ_Button1.BorderSize = 0;
+            this.plC_RJ_Button1.but_press = false;
+            this.plC_RJ_Button1.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button1.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button1.GUID = "";
+            this.plC_RJ_Button1.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button1.Location = new System.Drawing.Point(1239, 841);
+            this.plC_RJ_Button1.Name = "plC_RJ_Button1";
+            this.plC_RJ_Button1.OFF_文字內容 = "GUID";
+            this.plC_RJ_Button1.OFF_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button1.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button1.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button1.ON_BorderSize = 5;
+            this.plC_RJ_Button1.ON_文字內容 = "GUID";
+            this.plC_RJ_Button1.ON_文字字體 = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plC_RJ_Button1.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button1.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button1.ShadowColor = System.Drawing.Color.DimGray;
+            this.plC_RJ_Button1.ShadowSize = 0;
+            this.plC_RJ_Button1.ShowLoadingForm = false;
+            this.plC_RJ_Button1.Size = new System.Drawing.Size(150, 69);
+            this.plC_RJ_Button1.State = false;
+            this.plC_RJ_Button1.TabIndex = 18;
+            this.plC_RJ_Button1.Text = "GUID";
+            this.plC_RJ_Button1.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button1.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button1.字型鎖住 = false;
+            this.plC_RJ_Button1.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button1.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button1.文字鎖住 = false;
+            this.plC_RJ_Button1.讀取位元反向 = false;
+            this.plC_RJ_Button1.讀寫鎖住 = false;
+            this.plC_RJ_Button1.音效 = true;
+            this.plC_RJ_Button1.顯示 = false;
+            this.plC_RJ_Button1.顯示狀態 = false;
+            this.plC_RJ_Button1.MouseClickEvent += new MyUI.RJ_Button.MouseClickEventHandler(this.PlC_RJ_Button1_MouseClickEvent);
             // 
             // Form1
             // 
@@ -26809,6 +26857,7 @@
         private MyUI.PLC_RJ_Button plC_RJ_Button_新增資料;
         private System.Windows.Forms.TextBox textBox_規格;
         private MyUI.PLC_RJ_Button plC_RJ_Button_匯出;
+        private MyUI.PLC_RJ_Button plC_RJ_Button1;
     }
 }
 

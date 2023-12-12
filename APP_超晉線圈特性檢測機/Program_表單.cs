@@ -18,12 +18,27 @@ namespace APP_超晉線圈特性檢測機
         enum enum_test_result
         {
             GUID,
-            規格,
+            面積比,
+            電暈數量,
+            電阻值,
+            漏電流,
+            絕緣抵抗,
+            Vrms,
+            Irms,
+            電功率,
             加入時間,
         }
         enum enum_test_result_匯出
         {
-            規格,
+            GUID,
+            面積比,
+            電暈數量,
+            電阻值,
+            漏電流,
+            絕緣抵抗,
+            Vrms,
+            Irms,
+            電功率,
             加入時間,
         }
         public class ExcelResultClass
@@ -119,8 +134,16 @@ namespace APP_超晉線圈特性檢測機
             table.Password = "66437068";
             table.Port = "3306";
             table.AddColumnList("GUID", Table.StringType.VARCHAR, 50, Table.IndexType.PRIMARY);
-            table.AddColumnList("規格", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("面積比", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("電暈數量", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("電阻值", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("漏電流", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("絕緣抵抗", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("Vrms", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("Irms", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("電功率", Table.StringType.VARCHAR, 50, Table.IndexType.None);
             table.AddColumnList("加入時間", Table.DateType.DATETIME, Table.IndexType.INDEX);
+
             this.sqL_DataGridView_線圈測試結果.DataBaseName = table.DBName;
             this.sqL_DataGridView_線圈測試結果.TableName = table.TableName;
             this.sqL_DataGridView_線圈測試結果.Server = table.Server;
@@ -130,8 +153,16 @@ namespace APP_超晉線圈特性檢測機
             this.sqL_DataGridView_線圈測試結果.SSLMode = MySql.Data.MySqlClient.MySqlSslMode.None;
             this.sqL_DataGridView_線圈測試結果.Init(table);
             this.sqL_DataGridView_線圈測試結果.Set_ColumnVisible(false, new enum_test_result().GetEnumNames());
-            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(150, DataGridViewContentAlignment.MiddleLeft, enum_test_result.規格);
-            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(200, DataGridViewContentAlignment.MiddleCenter, enum_test_result.加入時間);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(100, DataGridViewContentAlignment.MiddleCenter, enum_test_result.GUID);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.面積比);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.電暈數量);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.電阻值);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.漏電流);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.絕緣抵抗);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.Vrms);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.Irms);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.電功率);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(150, DataGridViewContentAlignment.MiddleLeft, enum_test_result.加入時間);
             if (this.sqL_DataGridView_線圈測試結果.SQL_IsTableCreat() == false)
             {
                 this.sqL_DataGridView_線圈測試結果.SQL_CreateTable();
@@ -140,6 +171,7 @@ namespace APP_超晉線圈特性檢測機
             {
                 this.sqL_DataGridView_線圈測試結果.SQL_CheckAllColumnName(true);
             }
+
             this.plC_Button_表單下載.btnClick += PlC_Button_表單下載_btnClick;
 
             this.plC_RJ_Button_新增資料.MouseDownEvent += PlC_RJ_Button_新增資料_MouseDownEvent;
@@ -158,7 +190,8 @@ namespace APP_超晉線圈特性檢測機
                 {
                     List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.GetAllRows();
                     DataTable dataTable = list_value.ToDataTable(new enum_test_result());
-                    dataTable = dataTable.ReorderTable(enum_test_result.規格.GetEnumName(), enum_test_result.加入時間.GetEnumName());
+                    dataTable = dataTable.ReorderTable(enum_test_result.面積比.GetEnumName(), enum_test_result.電暈數量.GetEnumName(), enum_test_result.電阻值.GetEnumName(), enum_test_result.漏電流.GetEnumName()
+                        , enum_test_result.絕緣抵抗.GetEnumName(), enum_test_result.Vrms.GetEnumName(), enum_test_result.Irms.GetEnumName(), enum_test_result.電功率.GetEnumName(), enum_test_result.加入時間.GetEnumName());
                     dataTable.SaveFile(this.saveFileDialog_SaveExcel.FileName);
                     MyMessageBox.ShowDialog("匯出完成!!");
                 }
@@ -197,8 +230,16 @@ namespace APP_超晉線圈特性檢測機
                 return;
             }
             object[] value = list_value[0];
-            value[(int)enum_test_result.規格] = textBox_規格.Text;
-            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString_6();
+            // value[(int)enum_test_result.規格] = textBox_規格.Text;
+            value[(int)enum_test_result.面積比] = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
+            value[(int)enum_test_result.電暈數量] = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
+            value[(int)enum_test_result.電阻值] = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
+            value[(int)enum_test_result.漏電流] = textBox_ACW量測值.Text;
+            value[(int)enum_test_result.絕緣抵抗] = textBox_IR絕緣量測值.Text;
+            value[(int)enum_test_result.Vrms] = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
+            value[(int)enum_test_result.Irms] = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
+            value[(int)enum_test_result.電功率] = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
+            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString();
             this.sqL_DataGridView_線圈測試結果.SQL_ReplaceExtra(value, false);
             this.sqL_DataGridView_線圈測試結果.ReplaceExtra(value, true);
         }
@@ -206,12 +247,24 @@ namespace APP_超晉線圈特性檢測機
         {
             object[] value = new object[new enum_test_result().GetLength()];
             value[(int)enum_test_result.GUID] = Guid.NewGuid().ToString();
-            value[(int)enum_test_result.規格] = textBox_規格.Text;
-            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString_6();
+            value[(int)enum_test_result.面積比] = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
+            value[(int)enum_test_result.電暈數量] = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
+            value[(int)enum_test_result.電阻值] = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
+            value[(int)enum_test_result.漏電流] = textBox_ACW量測值.Text;
+            value[(int)enum_test_result.絕緣抵抗] = textBox_IR絕緣量測值.Text;
+            value[(int)enum_test_result.Vrms] = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
+            value[(int)enum_test_result.Irms] = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
+            value[(int)enum_test_result.電功率] = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
+            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString();
+
             this.sqL_DataGridView_線圈測試結果.SQL_AddRow(value, false);
             this.sqL_DataGridView_線圈測試結果.AddRow(value, true);
         }
 
+        private void PlC_RJ_Button1_MouseClickEvent(MouseEventArgs mevent)
+        {
+
+        }
         List<ExcelResultClass.Row> Row = new List<ExcelResultClass.Row>();
         PLC_Device PLC_Device_輸出一次ROW = new PLC_Device("M4000");
         PLC_Device PLC_Device_表單重置 = new PLC_Device("M4002");
@@ -318,6 +371,7 @@ namespace APP_超晉線圈特性檢測機
             //}
 
             #endregion
+
             this.GetExcelResultSheet(excelResultClass, ref sheetClass);
             sheetClass.NPOI_SaveFile(SavefileName);
             MyMessageBox.ShowDialog("存檔完成!");
@@ -342,14 +396,14 @@ namespace APP_超晉線圈特性檢測機
                 }
                 for (int i = PLC_Device_輸出ROW數量.Value - 1; i < PLC_Device_輸出ROW數量.Value; i++)
                 {
-                    Row[i].面積比 = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
-                    Row[i].電暈數量 = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
-                    Row[i].電阻值 = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
-                    Row[i].漏電流 = textBox_ACW量測值.Text;
-                    Row[i].絕緣抵抗 = textBox_IR絕緣量測值.Text;
-                    Row[i].Vrms = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
-                    Row[i].Irms = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
-                    Row[i].電功率 = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
+                    Row[i].面積比 = enum_test_result.面積比.ToString("0.0");
+                    Row[i].電暈數量 = enum_test_result.電暈數量.ToString();
+                    Row[i].電阻值 = enum_test_result.電阻值.ToString("0.000");
+                    Row[i].漏電流 = enum_test_result.漏電流.ToString();
+                    Row[i].絕緣抵抗 = enum_test_result.絕緣抵抗.ToString();
+                    Row[i].Vrms = enum_test_result.Vrms.ToString("0.0000");
+                    Row[i].Irms = enum_test_result.Irms.ToString("0.0000");
+                    Row[i].電功率 = enum_test_result.電功率.ToString("0.0000");
                     if(PLC_Device_電功率測試_OK.Bool)
                     {
                         Row[i].電功率判定 = "PASS";
