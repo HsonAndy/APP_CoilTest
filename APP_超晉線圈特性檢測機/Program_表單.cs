@@ -15,6 +15,7 @@ namespace APP_超晉線圈特性檢測機
 {
     public partial class Form1 : Form
     {
+        private int 工站數量 = 8;
         enum enum_test_result
         {
             GUID,
@@ -26,7 +27,17 @@ namespace APP_超晉線圈特性檢測機
             Vrms,
             Irms,
             電功率,
+            判定,
             加入時間,
+        }
+        enum enum_workstation
+        {
+            GUID,
+            Master_GUID,
+            SN,
+            Name,
+            Time,
+            Note,
         }
         enum enum_test_result_匯出
         {
@@ -80,6 +91,7 @@ namespace APP_超晉線圈特性檢測機
             }
             public class Row
             {
+                public string GUID { get; set; }
                 private string _面積比 = "";
                 private string _電暈數量 = "";
                 private string _電阻值 = "";
@@ -93,6 +105,7 @@ namespace APP_超晉線圈特性檢測機
                 private string _歐姆判定 = "";
                 private string _耐壓判定 = "";
                 private string _電功率判定 = "";
+                private string _加入時間 = "";
 
                 public string 面積比 { get => _面積比; set => _面積比 = value; }
                 public string 電暈數量 { get => _電暈數量; set => _電暈數量 = value; }
@@ -107,7 +120,7 @@ namespace APP_超晉線圈特性檢測機
                 public string 歐姆判定 { get => _歐姆判定; set => _歐姆判定 = value; }
                 public string 耐壓判定 { get => _耐壓判定; set => _耐壓判定 = value; }
                 public string 電功率判定 { get => _電功率判定; set => _電功率判定 = value; }
-
+                public string 加入時間 { get => _加入時間; set => _加入時間 = value; }
             }
             private HeaderClass header = new HeaderClass();
             private List<Row> rows = new List<Row>();
@@ -124,7 +137,127 @@ namespace APP_超晉線圈特性檢測機
             }
         }
         public string SheetFileName = @".\excel_header.txt";
-        private void Program_表單下載_Init()
+
+
+        private object[] Function_新增資料(ExcelResultClass.Row row)
+        {
+            object[] value = new object[new enum_test_result().GetLength()];
+            value[(int)enum_test_result.GUID] = Guid.NewGuid().ToString();
+            value[(int)enum_test_result.面積比] = row.面積比;
+            value[(int)enum_test_result.電暈數量] = row.電暈數量;
+            value[(int)enum_test_result.電阻值] = row.電阻值;
+            value[(int)enum_test_result.漏電流] = row.漏電流;
+            value[(int)enum_test_result.絕緣抵抗] = row.絕緣抵抗;
+            value[(int)enum_test_result.Vrms] = row.Vrms;
+            value[(int)enum_test_result.Irms] = row.Irms;
+            value[(int)enum_test_result.電功率] = row.電功率;
+            value[(int)enum_test_result.判定] = row.判定;
+            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString();
+            this.sqL_DataGridView_線圈測試結果.SQL_AddRow(value, false);
+            this.sqL_DataGridView_線圈測試結果.AddRow(value, true);
+            return value;
+        }
+        private void Function_工站資訊右旋()
+        {
+            List<object[]> list_value = this.sqL_DataGridView_工站資訊.SQL_GetAllRows(false);
+            List<object[]> list_value_current = new List<object[]>();
+            List<object[]> list_value_pre = new List<object[]>();
+            for (int i = (工站數量 - 1); i >= 0; i--)
+            {
+
+                list_value_current = list_value.GetRows((int)enum_workstation.SN, i.ToString());
+                list_value_pre = list_value.GetRows((int)enum_workstation.SN, (i - 1).ToString());
+                if((list_value_current.Count == 0 || list_value_pre.Count == 0) && i != 0)
+                {
+                    continue;
+                }
+                if (i == 0)
+                {
+                    list_value_current[0][(int)enum_workstation.Master_GUID] = "";
+                }
+                else
+                {
+                    string current_Master_GUID = list_value_current[0][(int)enum_workstation.Master_GUID].ObjectToString();
+                    string pre_Master_GUID = list_value_pre[0][(int)enum_workstation.Master_GUID].ObjectToString();
+                    list_value_current[0][(int)enum_workstation.Master_GUID] = pre_Master_GUID;
+                }
+
+
+            }
+            this.sqL_DataGridView_工站資訊.SQL_ReplaceExtra(list_value, true);
+        }
+        private void Function_工站資訊_新增資料(int station , ExcelResultClass.Row row)
+        {
+            string MasterGUID = Guid.NewGuid().ToString();
+            object[] value = new object[new enum_test_result().GetLength()];
+            value[(int)enum_test_result.GUID] = MasterGUID;
+            value[(int)enum_test_result.面積比] = row.面積比;
+            value[(int)enum_test_result.電暈數量] = row.電暈數量;
+            value[(int)enum_test_result.電阻值] = row.電阻值;
+            value[(int)enum_test_result.漏電流] = row.漏電流;
+            value[(int)enum_test_result.絕緣抵抗] = row.絕緣抵抗;
+            value[(int)enum_test_result.Vrms] = row.Vrms;
+            value[(int)enum_test_result.Irms] = row.Irms;
+            value[(int)enum_test_result.電功率] = row.電功率;
+            value[(int)enum_test_result.判定] = row.判定;
+            value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString();
+            this.sqL_DataGridView_線圈測試結果.SQL_AddRow(value, false);
+            this.sqL_DataGridView_線圈測試結果.AddRow(value, true);
+
+            List<object[]> list_value = this.sqL_DataGridView_工站資訊.SQL_GetAllRows(false);
+            List<object[]> list_value_buf = new List<object[]>();
+            list_value_buf = list_value.GetRows((int)enum_workstation.SN, station.ToString());
+            if(list_value_buf.Count > 0)
+            {
+                list_value_buf[0][(int)enum_workstation.Master_GUID] = MasterGUID;
+            }
+            this.sqL_DataGridView_工站資訊.SQL_ReplaceExtra(list_value, true);
+
+        }
+        private void Function_工站資訊_更新資料(int station,ExcelResultClass.Row row)
+        {
+            List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.SQL_GetRows((int)enum_test_result.GUID, row.GUID, false);
+            if (list_value.Count == 0) return;
+            object[] value = list_value[0];
+            value[(int)enum_test_result.面積比] = row.面積比;
+            value[(int)enum_test_result.電暈數量] = row.電暈數量;
+            value[(int)enum_test_result.電阻值] = row.電阻值;
+            value[(int)enum_test_result.漏電流] = row.漏電流;
+            value[(int)enum_test_result.絕緣抵抗] = row.絕緣抵抗;
+            value[(int)enum_test_result.Vrms] = row.Vrms;
+            value[(int)enum_test_result.Irms] = row.Irms;
+            value[(int)enum_test_result.電功率] = row.電功率;
+            value[(int)enum_test_result.判定] = row.判定;
+            this.sqL_DataGridView_線圈測試結果.SQL_ReplaceExtra(value, false);
+        }
+        private ExcelResultClass.Row Function_工站資訊_取得資料(int station)
+        {
+            ExcelResultClass.Row row = new ExcelResultClass.Row();
+            List<object[]> list_工站資訊 = this.sqL_DataGridView_工站資訊.SQL_GetRows((int)enum_workstation.SN, station.ToString(), false);
+            if(list_工站資訊.Count == 0)
+            {
+                return null;
+            }
+            row.GUID = list_工站資訊[0][(int)enum_workstation.Master_GUID].ObjectToString();
+            List<object[]> list_value = this.sqL_DataGridView_線圈測試結果.SQL_GetRows((int)enum_test_result.GUID, row.GUID, false);
+            if(list_value.Count == 0)
+            {
+                return null;
+            }
+
+            row.面積比 = list_value[0][(int)enum_test_result.面積比].ObjectToString();
+            row.電暈數量 = list_value[0][(int)enum_test_result.電暈數量].ObjectToString();
+            row.電阻值 = list_value[0][(int)enum_test_result.電阻值].ObjectToString();
+            row.漏電流 = list_value[0][(int)enum_test_result.漏電流].ObjectToString();
+            row.絕緣抵抗 = list_value[0][(int)enum_test_result.絕緣抵抗].ObjectToString();
+            row.Vrms = list_value[0][(int)enum_test_result.Vrms].ObjectToString();
+            row.Irms = list_value[0][(int)enum_test_result.Irms].ObjectToString();
+            row.電功率 = list_value[0][(int)enum_test_result.電功率].ObjectToString();
+            row.判定 = list_value[0][(int)enum_test_result.判定].ObjectToString();
+
+            return row;
+        }
+        public void Function_線圈測試結果_Init()
         {
             Table table = new Table("");
             table.DBName = "coil_mechine";
@@ -142,6 +275,7 @@ namespace APP_超晉線圈特性檢測機
             table.AddColumnList("Vrms", Table.StringType.VARCHAR, 50, Table.IndexType.None);
             table.AddColumnList("Irms", Table.StringType.VARCHAR, 50, Table.IndexType.None);
             table.AddColumnList("電功率", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("判定", Table.StringType.VARCHAR, 50, Table.IndexType.None);
             table.AddColumnList("加入時間", Table.DateType.DATETIME, Table.IndexType.INDEX);
 
             this.sqL_DataGridView_線圈測試結果.DataBaseName = table.DBName;
@@ -162,6 +296,7 @@ namespace APP_超晉線圈特性檢測機
             this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.Vrms);
             this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.Irms);
             this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.電功率);
+            this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(80, DataGridViewContentAlignment.MiddleCenter, enum_test_result.判定);
             this.sqL_DataGridView_線圈測試結果.Set_ColumnWidth(150, DataGridViewContentAlignment.MiddleLeft, enum_test_result.加入時間);
             if (this.sqL_DataGridView_線圈測試結果.SQL_IsTableCreat() == false)
             {
@@ -171,6 +306,77 @@ namespace APP_超晉線圈特性檢測機
             {
                 this.sqL_DataGridView_線圈測試結果.SQL_CheckAllColumnName(true);
             }
+        }
+        private void Function_工站資訊_Init()
+        {
+            Table table = new Table("");
+            table.DBName = "coil_mechine";
+            table.TableName = "workstation";
+            table.Server = "127.0.0.1";
+            table.Username = "user";
+            table.Password = "66437068";
+            table.Port = "3306";
+            table.AddColumnList("GUID", Table.StringType.VARCHAR, 50, Table.IndexType.PRIMARY);
+            table.AddColumnList("Master_GUID", Table.StringType.VARCHAR, 200, Table.IndexType.None);
+            table.AddColumnList("SN", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("Name", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+            table.AddColumnList("Time", Table.DateType.DATETIME, 50, Table.IndexType.None);
+            table.AddColumnList("Note", Table.StringType.VARCHAR, 50, Table.IndexType.None);
+
+            this.sqL_DataGridView_工站資訊.DataBaseName = table.DBName;
+            this.sqL_DataGridView_工站資訊.TableName = table.TableName;
+            this.sqL_DataGridView_工站資訊.Server = table.Server;
+            this.sqL_DataGridView_工站資訊.UserName = table.Username;
+            this.sqL_DataGridView_工站資訊.Password = table.Password;
+            this.sqL_DataGridView_工站資訊.Port = table.Port.StringToUInt32();
+            this.sqL_DataGridView_工站資訊.SSLMode = MySql.Data.MySqlClient.MySqlSslMode.None;
+            this.sqL_DataGridView_工站資訊.Init(table);
+
+            this.sqL_DataGridView_工站資訊.Set_ColumnWidth(100, DataGridViewContentAlignment.MiddleCenter, enum_workstation.GUID);
+            this.sqL_DataGridView_工站資訊.Set_ColumnWidth(100, DataGridViewContentAlignment.MiddleCenter, enum_workstation.Master_GUID);
+            this.sqL_DataGridView_工站資訊.Set_ColumnWidth(100, DataGridViewContentAlignment.MiddleCenter, enum_workstation.Name);
+            this.sqL_DataGridView_工站資訊.Set_ColumnWidth(100, DataGridViewContentAlignment.MiddleCenter, enum_workstation.Note);
+            if (this.sqL_DataGridView_工站資訊.SQL_IsTableCreat() == false)
+            {
+                this.sqL_DataGridView_工站資訊.SQL_CreateTable();
+            }
+            else
+            {
+                this.sqL_DataGridView_工站資訊.SQL_CheckAllColumnName(true);
+            }
+            List<object[]> list_value = this.sqL_DataGridView_工站資訊.SQL_GetAllRows(false);
+            List<object[]> list_value_buf = new List<object[]>();
+            List<object[]> list_value_add = new List<object[]>();
+            List<object[]> list_value_delete = new List<object[]>();
+            for (int i = 0; i < 工站數量; i++)
+            {
+                list_value_buf = list_value.GetRows((int)enum_workstation.SN, i.ToString());
+                if (list_value_buf.Count == 0)
+                {
+                    object[] value = new object[new enum_workstation().GetLength()];
+                    value[(int)enum_workstation.GUID] = Guid.NewGuid().ToString();
+                    value[(int)enum_workstation.SN] = i.ToString();
+                    list_value_add.Add(value);
+                }
+                else if(list_value_buf.Count != 1)
+                {
+                    object[] value = new object[new enum_workstation().GetLength()];
+                    value[(int)enum_workstation.GUID] = Guid.NewGuid().ToString();
+                    value[(int)enum_workstation.SN] = i.ToString();
+                    list_value_add.Add(value);
+                    list_value_delete.LockAdd(list_value_delete);
+                }
+            }
+            this.sqL_DataGridView_工站資訊.SQL_AddRows(list_value_add, false);
+            this.sqL_DataGridView_工站資訊.SQL_DeleteExtra(list_value_delete, false);
+        }
+        private void Program_表單下載_Init()
+        {
+            this.Function_線圈測試結果_Init();
+            this.Function_工站資訊_Init();
+
+
+
 
             this.plC_Button_表單下載.btnClick += PlC_Button_表單下載_btnClick;
 
@@ -247,23 +453,16 @@ namespace APP_超晉線圈特性檢測機
         {
             object[] value = new object[new enum_test_result().GetLength()];
             value[(int)enum_test_result.GUID] = Guid.NewGuid().ToString();
-            //value[(int)enum_test_result.面積比] = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
-            //value[(int)enum_test_result.電暈數量] = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
-            //value[(int)enum_test_result.電阻值] = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
-            //value[(int)enum_test_result.漏電流] = textBox_ACW量測值.Text;
-            //value[(int)enum_test_result.絕緣抵抗] = textBox_IR絕緣量測值.Text;
-            //value[(int)enum_test_result.Vrms] = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
-            //value[(int)enum_test_result.Irms] = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
-            //value[(int)enum_test_result.電功率] = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.面積比] = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
             value[(int)enum_test_result.電暈數量] = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
             value[(int)enum_test_result.電阻值] = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
-            value[(int)enum_test_result.漏電流] = 輸出textBox_ACW量測值;
-            value[(int)enum_test_result.絕緣抵抗] = 輸出textBox_ACW量測值;
+            value[(int)enum_test_result.漏電流] = textBox_ACW量測值.Text;
+            value[(int)enum_test_result.絕緣抵抗] = textBox_IR絕緣量測值.Text;
             value[(int)enum_test_result.Vrms] = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.Irms] = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.電功率] = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
             value[(int)enum_test_result.加入時間] = DateTime.Now.ToDateTimeString();
+
 
             this.sqL_DataGridView_線圈測試結果.SQL_AddRow(value, false);
             this.sqL_DataGridView_線圈測試結果.AddRow(value, true);
@@ -446,6 +645,7 @@ namespace APP_超晉線圈特性檢測機
 
         private void GetExcelResultSheet(ExcelResultClass excelResultClass, ref SheetClass sheetClass)
         {
+
             sheetClass.ReplaceCell(2, 1, $"{excelResultClass.Header.規格}");
             sheetClass.ReplaceCell(2, 2, $"{excelResultClass.Header.批號}");
             sheetClass.ReplaceCell(2, 3, $"{excelResultClass.Header.工令}");
@@ -491,213 +691,166 @@ namespace APP_超晉線圈特性檢測機
             }
 
         }
+        PLC_Device PLC_Device_電功率站有料 = new PLC_Device("S10002");
+        PLC_Device PLC_Device_耐壓絕緣站有料 = new PLC_Device("S10003");
+        PLC_Device PLC_Device_匝間站有料 = new PLC_Device("S10004");
+        PLC_Device PLC_Device_NG站有料 = new PLC_Device("S10005");
+        PLC_Device PLC_Device_成品組蓋站有料 = new PLC_Device("S10006");
+        PLC_Device PLC_Device_套O環站有料 = new PLC_Device("S10007");
 
-        PLC_Device PLC_Device_第二站測試次數 = new PLC_Device("D10000");
-        PLC_Device PLC_Device_電功率站測試次數 = new PLC_Device("D10001");
-        PLC_Device PLC_Device_耐壓站測試次數 = new PLC_Device("D10002");
-        PLC_Device PLC_Device_匝間站測試次數 = new PLC_Device("D10003");
-        PLC_Device PLC_Device_輸出數值站測試次數 = new PLC_Device("D10004");
-
-        PLC_Device PLC_Device_第1次Vrms暫存 = new PLC_Device("D10010");
-        PLC_Device PLC_Device_第1次Irms暫存 = new PLC_Device("D10012");
-        PLC_Device PLC_Device_第1次電功率暫存 = new PLC_Device("D10014");
-        PLC_Device PLC_Device_第1次漏電流暫存 = new PLC_Device("D10016");
-        PLC_Device PLC_Device_第1次絕緣抵抗暫存 = new PLC_Device("D10018");
-        PLC_Device PLC_Device_第1次電阻值暫存 = new PLC_Device("D10020");
-        PLC_Device PLC_Device_第1次電暈數量暫存 = new PLC_Device("D10022");
-        PLC_Device PLC_Device_第1次面積比暫存 = new PLC_Device("D10024");
-
-        PLC_Device PLC_Device_第2次Vrms暫存 = new PLC_Device("D10030");
-        PLC_Device PLC_Device_第2次Irms暫存 = new PLC_Device("D10032");
-        PLC_Device PLC_Device_第2次電功率暫存 = new PLC_Device("D10034");
-        PLC_Device PLC_Device_第2次漏電流暫存 = new PLC_Device("D10036");
-        PLC_Device PLC_Device_第2次絕緣抵抗暫存 = new PLC_Device("D10038");
-        PLC_Device PLC_Device_第2次電阻值暫存 = new PLC_Device("D10040");
-        PLC_Device PLC_Device_第2次電暈數量暫存 = new PLC_Device("D10042");
-        PLC_Device PLC_Device_第2次面積比暫存 = new PLC_Device("D10044");
-
-        PLC_Device PLC_Device_第3次Vrms暫存 = new PLC_Device("D10050");
-        PLC_Device PLC_Device_第3次Irms暫存 = new PLC_Device("D10052");
-        PLC_Device PLC_Device_第3次電功率暫存 = new PLC_Device("D10054");
-        PLC_Device PLC_Device_第3次漏電流暫存 = new PLC_Device("D10056");
-        PLC_Device PLC_Device_第3次絕緣抵抗暫存 = new PLC_Device("D10058");
-        PLC_Device PLC_Device_第3次電阻值暫存 = new PLC_Device("D10060");
-        PLC_Device PLC_Device_第3次電暈數量暫存 = new PLC_Device("D10062");
-        PLC_Device PLC_Device_第3次面積比暫存 = new PLC_Device("D10064");
-
-        PLC_Device PLC_Device_第4次Vrms暫存 = new PLC_Device("D10070");
-        PLC_Device PLC_Device_第4次Irms暫存 = new PLC_Device("D10072");
-        PLC_Device PLC_Device_第4次電功率暫存 = new PLC_Device("D10074");
-        PLC_Device PLC_Device_第4次漏電流暫存 = new PLC_Device("D10076");
-        PLC_Device PLC_Device_第4次絕緣抵抗暫存 = new PLC_Device("D10078");
-        PLC_Device PLC_Device_第4次電阻值暫存 = new PLC_Device("D10080");
-        PLC_Device PLC_Device_第4次電暈數量暫存 = new PLC_Device("D10082");
-        PLC_Device PLC_Device_第4次面積比暫存 = new PLC_Device("D10084");
-
-        PLC_Device PLC_Device_第5次Vrms暫存 = new PLC_Device("D10090");
-        PLC_Device PLC_Device_第5次Irms暫存 = new PLC_Device("D10092");
-        PLC_Device PLC_Device_第5次電功率暫存 = new PLC_Device("D10094");
-        PLC_Device PLC_Device_第5次漏電流暫存 = new PLC_Device("D10096");
-        PLC_Device PLC_Device_第5次絕緣抵抗暫存 = new PLC_Device("D10098");
-        PLC_Device PLC_Device_第5次電阻值暫存 = new PLC_Device("D10100");
-        PLC_Device PLC_Device_第5次電暈數量暫存 = new PLC_Device("D10102");
-        PLC_Device PLC_Device_第5次面積比暫存 = new PLC_Device("D10104");
-
-        PLC_Device PLC_Device_Vrms輸出 = new PLC_Device("D10110");
-        PLC_Device PLC_Device_Irms輸出 = new PLC_Device("D10112");
-        PLC_Device PLC_Device_電功率輸出 = new PLC_Device("D10114");
-        PLC_Device PLC_Device_漏電流輸出 = new PLC_Device("D10116");
-        PLC_Device PLC_Device_絕緣抵抗輸出 = new PLC_Device("D10118");
-        PLC_Device PLC_Device_電阻值輸出 = new PLC_Device("D10120");
-        PLC_Device PLC_Device_電暈數量輸出 = new PLC_Device("D10122");
-        PLC_Device PLC_Device_面積比輸出 = new PLC_Device("D10124");
-
-        string 第一站textBox_ACW量測值 = "F1", 第二站textBox_ACW量測值 = "F2", 第三站textBox_ACW量測值 = "F3", 第四站textBox_ACW量測值 = "F4", 第五站textBox_ACW量測值 = "F5";
-        string 第一站textBox_IR絕緣量測值, 第二站textBox_IR絕緣量測值, 第三站textBox_IR絕緣量測值, 第四站textBox_IR絕緣量測值, 第五站textBox_IR絕緣量測值;
-
-        string 輸出textBox_ACW量測值;
-        string 輸出textBox_IR絕緣量測值;
-
-        private void sub_輸出報表資料暫存運算()
+        PLC_Device PLC_Device_第一格有料 = new PLC_Device("M1021");
+        PLC_Device PLC_Device_右旋一格 = new PLC_Device("M1022");
+        ExcelResultClass.Row row = new ExcelResultClass.Row();
+        ExcelResultClass.Row row_電功率站 = new ExcelResultClass.Row();
+        ExcelResultClass.Row row_耐壓站 = new ExcelResultClass.Row();
+        ExcelResultClass.Row row_歐姆匝間站 = new ExcelResultClass.Row();
+        private void sub_工站資料輸出()
         {
-
-
-            if (PLC_Device_電功率站測試次數.Value == 1)
+            if (PLC_Device_第一格有料.Bool)
             {
-                PLC_Device_第1次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
-                PLC_Device_第1次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
-                PLC_Device_第1次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
-            }
-            if (PLC_Device_耐壓站測試次數.Value == 1)
-            {
-                //第一站textBox_ACW量測值 = textBox_ACW量測值.Text;
-                //第一站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
-            }
-            if (PLC_Device_匝間站測試次數.Value == 1)
-            {
-                PLC_Device_第1次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
-                PLC_Device_第1次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
-                PLC_Device_第1次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
-
-                PLC_Device_電阻值輸出.Value = PLC_Device_第1次電阻值暫存.Value;
-                PLC_Device_電暈數量輸出.Value = PLC_Device_第1次電暈數量暫存.Value;
-                PLC_Device_面積比輸出.Value = PLC_Device_第1次面積比暫存.Value;
+                工站資訊_新增資料();
+                工站資訊_更新資料();
+                PLC_Device_第一格有料.Bool = false;
             }
 
-            if (PLC_Device_電功率站測試次數.Value == 2)
+            if(PLC_Device_右旋一格.Bool)
             {
-                PLC_Device_第2次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
-                PLC_Device_第2次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
-                PLC_Device_第2次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
-            }
-            if (PLC_Device_耐壓站測試次數.Value == 2)
-            {
-                //第二站textBox_ACW量測值 = textBox_ACW量測值.Text;
-                //第二站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
-            }
-            if (PLC_Device_匝間站測試次數.Value == 2)
-            {
-                PLC_Device_第2次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
-                PLC_Device_第2次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
-                PLC_Device_第2次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
-
-                PLC_Device_電阻值輸出.Value = PLC_Device_第2次電阻值暫存.Value;
-                PLC_Device_電暈數量輸出.Value = PLC_Device_第2次電暈數量暫存.Value;
-                PLC_Device_面積比輸出.Value = PLC_Device_第2次面積比暫存.Value;
-            }
-
-            if (PLC_Device_電功率站測試次數.Value == 3)
-            {
-                PLC_Device_第3次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
-                PLC_Device_第3次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
-                PLC_Device_第3次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
-            }
-            if (PLC_Device_耐壓站測試次數.Value == 3)
-            {
-                //第三站textBox_ACW量測值 = textBox_ACW量測值.Text;
-                //第三站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
-            }
-            if (PLC_Device_匝間站測試次數.Value == 3)
-            {
-                PLC_Device_第3次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
-                PLC_Device_第3次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
-                PLC_Device_第3次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
-
-                PLC_Device_電阻值輸出.Value = PLC_Device_第3次電阻值暫存.Value;
-                PLC_Device_電暈數量輸出.Value = PLC_Device_第3次電暈數量暫存.Value;
-                PLC_Device_面積比輸出.Value = PLC_Device_第3次面積比暫存.Value;
-            }
-
-            if (PLC_Device_電功率站測試次數.Value == 4)
-            {
-                PLC_Device_第4次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
-                PLC_Device_第4次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
-                PLC_Device_第4次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
-            }
-            if (PLC_Device_耐壓站測試次數.Value == 4)
-            {
-                //第四站textBox_ACW量測值 = textBox_ACW量測值.Text;
-                //第四站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
-            }
-            if (PLC_Device_匝間站測試次數.Value == 4)
-            {
-                PLC_Device_第4次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
-                PLC_Device_第4次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
-                PLC_Device_第4次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
-
-                PLC_Device_電阻值輸出.Value = PLC_Device_第4次電阻值暫存.Value;
-                PLC_Device_電暈數量輸出.Value = PLC_Device_第4次電暈數量暫存.Value;
-                PLC_Device_面積比輸出.Value = PLC_Device_第4次面積比暫存.Value;
-            }
-
-            if (PLC_Device_電功率站測試次數.Value == 5)
-            {
-                PLC_Device_第5次Vrms暫存.Value = PLC_NumBox_ASR_2100電功率Vrms量測值.Value;
-                PLC_Device_第5次Irms暫存.Value = PLC_NumBox_ASR_2100電功率Irms量測值.Value;
-                PLC_Device_第5次電功率暫存.Value = PLC_NumBox_ASR_2100電功率P量測值.Value;
-            }
-            if (PLC_Device_耐壓站測試次數.Value == 5)
-            {
-                //第五站textBox_ACW量測值 = textBox_ACW量測值.Text;
-                //第五站textBox_IR絕緣量測值 = textBox_IR絕緣量測值.Text;
-            }
-            if (PLC_Device_匝間站測試次數.Value == 5)
-            {
-                PLC_Device_第5次電阻值暫存.Value = PLC_NumBox_GOM804檢測歐姆值.Value;
-                PLC_Device_第5次電暈數量暫存.Value = PLC_NumBox_IWT5000A檢測匝間電暈數.Value;
-                PLC_Device_第5次面積比暫存.Value = PLC_NumBox_IWT5000A檢測匝間面積比.Value;
-
-                PLC_Device_電阻值輸出.Value = PLC_Device_第5次電阻值暫存.Value;
-                PLC_Device_電暈數量輸出.Value = PLC_Device_第5次電暈數量暫存.Value;
-                PLC_Device_面積比輸出.Value = PLC_Device_第5次面積比暫存.Value;
+                工站資訊_資訊右旋();
+                PLC_Device_右旋一格.Bool = false;                     
             }
 
 
-            if(PLC_Device_輸出數值站測試次數.Value == 1)
+        }
+        private void 工站資訊_新增資料()
+        {
+            row.面積比 = "0.0";
+            row.電暈數量 = "0.0";
+            row.電阻值 = "0.0";
+            row.漏電流 = "0.0";
+            row.絕緣抵抗 = "0.0";
+            row.Vrms = "0.0";
+            row.Irms = "0.0";
+            row.電功率 = "0.0";
+            row.加入時間 = DateTime.Now.ToDateTimeString();
+            if (PLC_Device_電功率測試_OK.Bool)
             {
-                輸出textBox_ACW量測值 = 第一站textBox_ACW量測值;
-                輸出textBox_IR絕緣量測值 = 第一站textBox_IR絕緣量測值;
+                row.電功率判定 = " ";
             }
-            if (PLC_Device_輸出數值站測試次數.Value == 2)
+            else row.電功率判定 = " ";
+
+            if (PLC_Device_耐壓測試_OK.Bool)
             {
-                輸出textBox_ACW量測值 = 第二站textBox_ACW量測值;
-                輸出textBox_IR絕緣量測值 = 第二站textBox_IR絕緣量測值;
+                row.耐壓判定 = " ";
             }
-            if (PLC_Device_輸出數值站測試次數.Value == 3)
+            else row.耐壓判定 = " ";
+
+            if (PLC_Device_匝間測試_OK.Bool)
             {
-                輸出textBox_ACW量測值 = 第三站textBox_ACW量測值;
-                輸出textBox_IR絕緣量測值 = 第三站textBox_IR絕緣量測值;
+                row.匝間判定 = " ";
             }
-            if (PLC_Device_輸出數值站測試次數.Value == 4)
+            else row.匝間判定 = " ";
+            if (PLC_Device_微歐姆測試_OK.Bool)
             {
-                輸出textBox_ACW量測值 = 第四站textBox_ACW量測值;
-                輸出textBox_IR絕緣量測值 = 第四站textBox_IR絕緣量測值;
+                row.歐姆判定 = " ";
             }
-            if (PLC_Device_輸出數值站測試次數.Value == 5)
+            else row.歐姆判定 = " ";
+            if (PLC_Device_輸出結果.Bool)
             {
-                輸出textBox_ACW量測值 = 第五站textBox_ACW量測值;
-                輸出textBox_IR絕緣量測值 = 第五站textBox_IR絕緣量測值;
+                row.判定 = " ";
             }
+            else row.判定 = " ";
+
+
+            Function_工站資訊_新增資料(0, row);
+        }
+        private void 工站資訊_資訊右旋()
+        {
+            Function_工站資訊右旋();
+        }
+        private void 工站資訊_更新資料()
+        {
+            row.面積比 = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
+            row.電暈數量 = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
+            row.電阻值 = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
+            row.漏電流 = textBox_ACW量測值.Text;
+            row.絕緣抵抗 = textBox_IR絕緣量測值.Text;
+            row.Vrms = (PLC_NumBox_ASR_2100電功率Vrms量測值.Value / 10000D).ToString("0.0000");
+            row.Irms = (PLC_NumBox_ASR_2100電功率Irms量測值.Value / 10000D).ToString("0.0000");
+            row.電功率 = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
+            row.加入時間 = DateTime.Now.ToDateTimeString();
+            if (PLC_Device_電功率測試_OK.Bool)
+            {
+                row.電功率判定 = "PASS";
+            }
+            else row.電功率判定 = "FAIL";
+
+            if (PLC_Device_耐壓測試_OK.Bool)
+            {
+                row.耐壓判定 = "PASS";
+            }
+            else row.耐壓判定 = "FAIL";
+
+            if (PLC_Device_匝間測試_OK.Bool)
+            {
+                row.匝間判定 = "PASS";
+            }
+            else row.匝間判定 = "FAIL";
+            if (PLC_Device_微歐姆測試_OK.Bool)
+            {
+                row.歐姆判定 = "PASS";
+            }
+            else row.歐姆判定 = "FAIL";
+            if (PLC_Device_輸出結果.Bool)
+            {
+                row.判定 = "PASS";
+            }
+            else row.判定 = "FAIL";
+
+            if (PLC_Device_電功率站有料.Bool)
+            {
+                row_電功率站 = Function_工站資訊_取得資料(2);
+                row_電功率站.電功率 = (PLC_NumBox_ASR_2100電功率P量測值.Value / 10000D).ToString("0.0000");
+                Function_工站資訊_更新資料(2, row_電功率站);
+            }
+
+            if (PLC_Device_耐壓絕緣站有料.Bool)
+            {
+                row_耐壓站 = Function_工站資訊_取得資料(3);
+                row_耐壓站.絕緣抵抗 = textBox_IR絕緣量測值.Text;
+                row_耐壓站.漏電流 = textBox_ACW量測值.Text;
+                Function_工站資訊_更新資料(3, row_耐壓站);
+            }
+            if (PLC_Device_匝間站有料.Bool)
+            {
+                row_歐姆匝間站 = Function_工站資訊_取得資料(4);
+                row_歐姆匝間站.電暈數量 = PLC_NumBox_IWT5000A檢測匝間電暈數.Value.ToString();
+                row_歐姆匝間站.電阻值 = (PLC_NumBox_GOM804檢測歐姆值.Value / 1000D).ToString("0.000");
+                row_歐姆匝間站.面積比 = (PLC_NumBox_IWT5000A檢測匝間面積比.Value / 10D).ToString("0.0");
+
+                Function_工站資訊_更新資料(4, row_歐姆匝間站);
+            }
+        }
+
+        private void plC_RJ_Button_TEST新增資料_MouseClickEvent(MouseEventArgs mevent)
+        {
+            工站資訊_新增資料();
+        }
+        private void plC_RJ_Button_工站資訊資訊右旋_MouseClickEvent(MouseEventArgs mevent)
+        {
+            工站資訊_資訊右旋();
+        }
+        private void plC_RJ_Button_工站資訊_新增資料_MouseClickEvent(MouseEventArgs mevent)
+        {
+           
+
+        }
+        private void plC_RJ_Button4_工站更新資料_MouseClickEvent(MouseEventArgs mevent)
+        {
+            工站資訊_更新資料();
+        }
+        private void plC_RJ_Button_工站取得資料_MouseClickEvent(MouseEventArgs mevent)
+        {
+            
         }
 
     }

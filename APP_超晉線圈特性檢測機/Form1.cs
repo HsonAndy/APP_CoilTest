@@ -45,17 +45,18 @@ namespace APP_超晉線圈特性檢測機
                 this.MyThread_儀器通訊.AutoStop(true);
                 this.MyThread_儀器通訊.Trigger();
 
-                this.MyThread__輸出報表資料暫存運算 = new MyThread();
-                this.MyThread__輸出報表資料暫存運算.Add_Method(sub_輸出報表資料暫存運算);
-                this.MyThread__輸出報表資料暫存運算.SetSleepTime(1);
-                this.MyThread__輸出報表資料暫存運算.AutoRun(true);
-                this.MyThread__輸出報表資料暫存運算.AutoStop(true);
-                this.MyThread__輸出報表資料暫存運算.Trigger();
-
                 this.GOM_804_Init("COM4", 115200);
                 this.IWT_5000A_Init("COM6", 57600);
                 this.GPT_12003_Init("COM5", 115200);
                 this.ASR_2100_Init("COM7", 115200);
+
+                MyThread__輸出報表資料暫存運算 = new MyThread();
+                this.MyThread__輸出報表資料暫存運算.Add_Method(sub_工站資料輸出);
+                this.MyThread__輸出報表資料暫存運算.SetSleepTime(2);
+                this.MyThread__輸出報表資料暫存運算.AutoRun(true);
+                this.MyThread__輸出報表資料暫存運算.AutoStop(true);
+                this.MyThread__輸出報表資料暫存運算.Trigger();
+
                 this.Program_表單下載_Init();
                 this.timer_mythread.Enabled = false;
                 this.WindowState = FormWindowState.Maximized;
